@@ -12,7 +12,7 @@
     <meta name="keywords" content="스포츠, 테니스, 러닝, 필라테스, 요가, 골프, 스포츠웨어, 룰루레몬, 편안한, 부드러운">
     <title>룰루레몬 공식 온라인 스토어 | 룰루레몬 </title>
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/pavicon.png" type="image/x-icon">
     <!-- 스타일 -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
@@ -31,20 +31,227 @@
 <body>
     <!-- ================================1행 헤더 -->
     <header>
-        <h1><a href="index.html"><img src="" alt="룰루레몬"></a></h1>
+        <!-- 1-1 로고 -->
+        <h1><a href="index.html"><img src="./images/logo.png" alt="룰루레몬"></a></h1>
+        <!-- 1-2 nav -->
+        <ul class="nav">
+            <!-- 1-2-1 여성 -->
+            <li><a href="#">Woman</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="woman_open_wrap"><!-- js 작성 --></ul>
+            </li>
+            <li><a href="#">man</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="man_open_wrap"></ul>
+            </li>
+            <li><a href="#">Accessory</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="acce_open_wrap"></ul>
+            </li>
+            <li><a href="#">New</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="new_open_wrap"></ul>
+            </li>
+            <li><a href="#">Community</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+            <ul class="commu_open_wrap"></ul>
+            </li>
+        </ul><!-- e:nav -->
+        <div class="util_menu">
+            <div class="language_g">
+                <img src="./images/world.svg" alt="">
+                <span>KOR</span>
+                <img src="./images/down.svg" alt="언어선택 보기">
+            </div>
+            <a href="#"><img src="./images/search.svg" alt="검색하기"></a>
+            <a href="#"><img src="./images/login.svg" alt="로그인하기"></a>
+            <a href="#"><img src="./images/wish.svg" alt="위시리스트 보기"></a>
+            <a href="#"><img src="./images/cart.svg" alt="장바구니보기"></a>
+        </div>
     </header>
-    <!-- ================================2행 메인배너 -->
+    <!-- ================================ 메인 -->
     <main>
+        <!-- 2행 메인배너 -->
+        <section class="hero_bnr">
+            <a href="#">
+                <!-- 백그라운드 이미지 -->
+                <div class="bnr_title_contents">
+                    <h1>Fall 2026 Running</h1>
+                    <p>러닝, 진정한 몰입의 순간</p>
+                </div>
+            </a>
+        </section>
         <!-- 3행 카테고리 -->
+        <section>
+            <ul class="activity_category">
+                <!-- js 작성 -->
+                <!-- <li><a href="#">
+                    <img src="" alt="">
+                    <span>Running</span>
+                </a></li> -->
+            </ul>
+        </section>
         <!-- 4행 베스트셀러 -->
+        <section>
+            <h2>Best Seller</h2>
+            <!-- 카테고리 메뉴 -->
+            <div class="best_category_more">
+                <div class="bsst_categry_menu">
+                    <a href="#" class="active">Woman</a>
+                    <a href="#">Man</a>
+                    <a href="#">Accessory</a>
+                </div>
+                <p><a href="#" class="more_btn">more<!-- 화살표 백그라운드 이미지 --></a></p>
+            </div>
+            <!-- 상품 스와이퍼 -->
+            <div class="running_contents">
+                <!-- 여성 상품 -->
+                <div class="swiper best_woman_swiper active">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                        <!-- <div class="swiper-slide">
+                            <p class="item_thum">백그라운드 이미지</p>
+                            <div class="item_contents">
+                                <p class="item_name"></p>
+                                <p class="item_price"></p>
+                            </div>
+                            <button type="button" id="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- 남성 상품 -->
+                <div class="swiper best_man_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                    </div>
+                </div>
+                <!-- 액세서리 -->
+                <div class="swiper best_accessory_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                    </div>
+                </div>
+            </div><!-- e:best_contents -->
+        </section>
         <!-- 5행 러닝 컬렉션 -->
+        <section>
+            <div class="running_bnr">
+                <!-- 이미지 백그라운드 -->
+                <h2>Running Collection</h2>
+                <p>트레일 러닝부터 하이킹까지 탁월한 땀 배출력과 쾌적함을 선사하는 아이템</p>
+                <!-- more js 붙여넣기 -->
+            </div>
+            <div class="running_category_menu">
+                <a href="#" class="active">Woman</a>
+                <a href="#">Man</a>
+                <a href="#">Accessory</a>
+            </div>
+            <!-- 상품 스와이퍼 -->
+            <div class="running_contents">
+                <!-- 여성 상품 -->
+                <div class="swiper running_woman_swiper active">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                        <!-- <div class="swiper-slide">
+                            <p class="item_thum">백그라운드 이미지</p>
+                            <div class="item_contents">
+                                <p class="item_name"></p>
+                                <p class="item_price"></p>
+                            </div>
+                            <button type="button" id="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- 남성 상품 -->
+                <div class="swiper running_man_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                    </div>
+                </div>
+                <!-- 액세서리 -->
+                <div class="swiper running_accessory_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                    </div>
+                </div>
+            </div><!-- e:running_contents -->
+        </section>
         <!-- 6행 컬렉션 -->
+        <section>
+            <a href="#">
+                <h2>Yoga&Pilates Collection</h2>
+                <p>가벼운 Nulu™ 원단의 루스한 핏으로 원하는 감각에만 온전히 집중해 보세요.</p>
+                <!-- more js -->
+            </a>
+            <a href="#">
+                <h2>ABC Collection</h2>
+                <p>탁월한 신축성, 편안함, 통기성을 지금 바로 경험해 보세요.</p>
+                <!-- more js -->
+            </a>
+        </section>
         <!-- 7행 데일리 웨어 -->
+        <section>
+            <a href="#">
+                <h2>Daily wear</h2>
+                <p>평일부터 주말까지 아우르는 데일리 아이템</p>
+                <!-- more js -->
+            </a>
+            <div class="daily_category_menu">
+                <a href="#" class="active">Woman</a>
+                <a href="#">Man</a>
+            </div>
+            <!-- 상품 스와이퍼 -->
+            <div class="daily_contents">
+                <!-- 여성 상품 -->
+                <div class="swiper daily_woman_swiper active">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                        <!-- <div class="swiper-slide">
+                            <p class="item_thum">백그라운드 이미지</p>
+                            <div class="item_contents">
+                                <p class="item_name"></p>
+                                <p class="item_price"></p>
+                            </div>
+                            <button type="button" id="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- 남성 상품 -->
+                <div class="swiper daily_man_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                    </div>
+                </div>
+            </div><!-- e:daily_contents -->
+        </section>
         <!-- 8행 광고 배너-->
+        <section>
+            <div class="ad_bnr_txt">
+                <h2>Best Review Event</h2>
+                <p>온라인 스토어에서 구매한 상품의 리뷰를 남겨주세요.<br>매월 5분께 룰루레몬 e 기프트 카드를 드립니다.</p>
+            </div>
+            <p><!-- img 백그라운드 --></p>
+        </section>
         <!-- 9행 shop the look-->
+        <section>
+            <h2>Shop The Look</h2>
+            <p>룰루레몬으로 완성한 나만의 스타일을 @lululemonkr 또는 #lululemon을 태그해 인스타그램에 공유해 보세요.</p>
+        </section>
+        <div class="swiper look_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- JS 작성 -->
+                        <!-- <div class="swiper-slide">
+                            <div class="item_contents">
+                                <p class="account">js</p>
+                                <a href="#"><img src="#" alt="정보 확인하기"></a>                                
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
         <!-- 10행 브랜드스토리-->
+        
     </main>
-    <!-- ================================11행 풋터-->
+    <!-- ================================풋터-->
     <footer></footer>
 </body>
 </html>
