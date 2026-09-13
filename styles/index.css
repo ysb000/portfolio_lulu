@@ -1,13 +1,127 @@
 body {}
-/* -------------------------------1행 헤더 */
-header {}
+/* -------------------------------header */
+header {
+    height:50px;
+    padding:0 100px;
+    justify-content:space-between;
+}
 /* 로고 */
-header h1 {}
+header h1 {width:113px;}
 header h1 a {}
-header h1 a img{}
+header h1 a img{width:100%;}
 /* nav */
-header .nav {}
+header .nav {gap:10px;}
 header .nav > li {}
-header .nav > li a{}
-header .nav > li {}
+header .nav > li a{
+    display:block; padding:12px 10px;
+}
+header .nav > li [class*=wrap] {}
+header .nav > li [class*=wrap] li {}
 /* util_menu */
+header .util_menu {gap:10px;}
+header .util_menu * {display:inline-block;}
+header .util_menu .language_selector{display:flex; align-items:center; gap:6px;}
+header .util_menu .language_selector span{display:flex; align-items:center; gap:4px;}
+header .util_menu .language_selector span img{}
+header .util_menu .language_selector span em {}
+header .util_menu .language_selector img {}
+header .util_menu a {}
+/* -------------------------------main */
+/* 메인배너 */
+main {}
+main .hero_bnr {}
+main .hero_bnr a{
+    display:block; width:100%; position:relative;
+}
+main .hero_bnr a .img{
+    width:100%; height:900px;
+    background:url(../images/bnr/main_bnr.jpg);
+    background-position: center top; background-size: cover;
+}
+main .hero_bnr .bnr_title_contents {
+    display:block;
+    padding:20px 30px;
+    position:absolute; 
+    left:50%; top:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    border-right:1px solid #fff; border-left:1px solid #fff;
+}
+main .hero_bnr .bnr_title_contents * {color:var(--color-light);}
+main .hero_bnr .bnr_title_contents h1 {
+    font-size:var(--d-font-title-lg);
+    font-weight:var(--font-weight);
+    margin-bottom:var(--d-spacing-lg);
+}
+main .hero_bnr .bnr_title_contents p {font-size:var(--d-font-contents-lg);}
+/* 3행 카테고리 */
+main .category .activity_category{}
+main .category .activity_category li {}
+main .category .activity_category li a{}
+main .category .activity_category li a img {}
+main .category .activity_category li a span {}
+/* 4행 베스트 셀러 */
+main .best_seller h2{}
+main .best_seller .best_category_more{}
+main .best_seller .best_category_more .best_category_menu{}
+main .best_seller .best_category_more .best_category_menu a{}
+main .best_seller .best_category_more .best_category_menu .active{}
+/* more_btn */
+main .best_seller .best_category_more p{}
+main .best_seller .best_category_more p .more_btn{}
+/* swiper */
+main .best_seller .best_contents{}
+/* woman */
+main .best_seller .best_contents .best_woman_swiper{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide p {}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide {}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .item_contents{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .item_contents .item_name{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .item_contents .item_price{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .wish{}
+/* man */
+main .best_seller .best_contents .best_man_swiper{}
+main .best_seller .best_contents .best_man_swiper .swiper-wrapper{}
+main .best_seller .best_contents .best_man_swiper .swiper-wrapper .swiper-slide{}
+/* acce */
+main .best_seller .best_contents .best_accessory_swiper{}
+main .best_seller .best_contents .best_accessory_swiper .swiper-wrapper{}
+main .best_seller .best_contents .best_accessory_swiper .swiper-wrapper .swiper-slide{}
+/* 5행 러닝 컬렉션 */
+main .running {}
+main .running .running_bnr {}
+main .running .running_bnr h2 {}
+main .running .running_category_menu {}
+main .running .running_category_menu a {}
+main .running .running_category_menu .active {}
+/* 상품 */
+main .running .running_contents {}
+/* 여성 */
+main .running .running_contents .running_woman_swiper {}
+main .running .running_contents .running_woman_swiper .swiper-wrapper{}
+main .running .running_contents .running_woman_swiper .swiper-wrapper .swiper-slide{}
+/* 남성 */
+main .running .running_contents .running_man_swiper {}
+main .running .running_contents .running_man_swiper .swiper-wrapper{}
+main .running .running_contents .running_man_swiper .swiper-wrapper .swiper-slide{}
+/* 액세서리 */
+main .running .running_contents .running_accessory_swiper {}
+main .running .running_contents .running_accessory_swiper .swiper-wrapper{}
+main .running .running_contents .running_accessory_swiper .swiper-wrapper .swiper-slide{}
+/* 6행collevtion */
+main .collection {}
+main .collection a {}
+main .collection a h2 {}
+main .collection a p {}
+/* 7행 베스트 셀러 */
+main section {}
+/* 8행 베스트 셀러 */
+main section {}
+/* 9행 베스트 셀러 */
+main section {}
+/* 10행 베스트 셀러 */
+main section {}
+/* 9행 베스트 셀러 */
+main section {}

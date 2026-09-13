@@ -1,0 +1,44 @@
+/* var.css */
+:root{
+    /* 색상 */
+    --color-primary: #D0092A; /* 포인트, 버튼 */
+    --color-btn:#171717; /* 카테고리 버튼 */
+    --color-dark:#000; /* 검은색,텍스트 */
+    --color-light:#ffffff; /* 배경, 글씨 */
+    --color-gray:#f0f0f0; /* 회색배경, 카테고리 버튼 */
+
+    --color-menu:#666; /* 진한 회색, 글자 */
+    --color-mute:#a9a9a9; /* 비활성화 메뉴 */
+    --color-icon:#c7c7c7; 
+    
+    --bg-blur-txt:rgba(0,0,0,0.3); /* 텍스트 블러 배경 */
+    --bg-blur-img:rgba(0,0,0,0.2);/* 이미지 블러 */
+    /* 텍스트 */
+    /* 데스크탑 */
+    --d-font-title-lg:3.375rem; /* 54px 대제목 */
+    --d-font-title-md:2.75rem; /* 44px 중제목 */
+    
+    --d-font-contents-lg:1.25rem; /* 20px */
+    --d-font-contents-md:1rem; /* 16px 기본*/
+    --d-font-contents-sm:0.875rem; /* 14px */
+    --d-font-contents-xs:0.75rem; /* 12px */
+    
+    --font-weight:500; /* Medium */
+    
+    --d-font-line-height: 1.5;
+    /* 태블릿 */
+    /* 모바일 */
+    /* 여백 */
+    --d-spacing-xs:10px;
+    --d-spacing-sm:16px;
+    --d-spacing-md:20px;
+    --d-spacing-lg:30px;
+    --d-spacing-xl:50px;
+    --d-spacing-xxl:80px;
+}
+
+.flex-row {
+    display:flex; 
+    flex-flow:row nowrap; 
+    justify-content: space-between; align-items:center;
+}
