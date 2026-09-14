@@ -43,16 +43,16 @@
     justify-content: space-between; align-items:center;
 }
 
+.flex-col{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center; align-items:flex-start;
+}
+
 .tab_g {
     display:flex; flex-flow:row nowrap; gap:var(--d-spacing-xs);
 }
 
-.tab_active_btn{
-    width:105px; text-align: center; padding:6px 0; 
-    border:1px solid #000; 
-}
-.tab_btn{
-    width:105px; text-align: center; padding:6px 0; 
-    border:1px solid var(--color-icon);
-    color:var(--color-mute); 
+.more_g {
+    display:flex; gap:4px; align-items:flex-end;
 }

@@ -1,4 +1,5 @@
 # 룰루레몬 홈페이지 리디자인 Project
 **"This is a portfolio project for educational purposes."**
 * 이것은 취업 목적의 포트폴리오 프로젝트입니다.
-## 26/09/22 14:20~6:10 html 작성
+## 26/09/12 14:20~6:10 html 작성
+## 26/09/13 

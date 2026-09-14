@@ -123,16 +123,16 @@
                 </li>
             </ul>
         <!-- 4행 베스트셀러 -->
-        <section class="best_seller">
+        <section class="best_container">
             <h2>Best Seller</h2>
             <!-- 탭 메뉴 -->
                 <div class="best_tab_more flex-row">
-                    <div class="bsst_tab_menu tab_g">
-                        <a href="#" class="tab_active_btn">Woman</a>
-                        <a href="#" class="tab_btn">Man</a>
-                        <a href="#" class="tab_btn">Accessory</a>
+                    <div class="best_tab_menu tab_g">
+                        <a href="#" class="active">Woman</a>
+                        <a href="#">Man</a>
+                        <a href="#">Accessory</a>
                     </div>
-                    <a href="#" class="more_btn">more <img src="./images/more.png" alt="더보기"></a>
+                    <a href="#" class="more_btn more_g">more <img src="./images/more.png" alt="더보기"></a>
                 </div>
                 <!-- 상품 스와이퍼 -->
                 <div class="best_contents">
@@ -159,7 +159,7 @@
                         </div>
                     </div>
                     <!-- 액세서리 -->
-                    <div class="swiper best_accessory_swiper">
+                    <div class="swiper best_acc_swiper">
                         <div class="swiper-wrapper">
                             <!-- JS 작성 -->
                         </div>
@@ -167,17 +167,17 @@
                 </div><!-- e:best_contents -->
         </section>
         <!-- 5행 러닝 컬렉션 -->
-        <section class="running">
-            <div class="running_bnr">
+        <section class="running_container">
+            <div class="running_bnr flex-col">
                 <!-- 이미지 백그라운드 -->
                 <h2>Running Collection</h2>
                 <p class="contents">트레일 러닝부터 하이킹까지 탁월한 땀 배출력과 쾌적함을 선사하는 아이템</p>
-                <button type="button" class="more_btn">more</button>
-            </div>
-            <div class="running_tab_menu">
-                <a href="#" class="active">Woman</a>
-                <a href="#">Man</a>
-                <a href="#">Accessory</a>
+                <a href="#" class="more_btn more_g">more <img src="./images/more.png" alt="더보기"></a>
+                <div class="running_tab_menu tab_g">
+                    <a href="#" class="active">Woman</a>
+                    <a href="#">Man</a>
+                    <a href="#">Accessory</a>
+                </div>
             </div>
             <!-- 상품 스와이퍼 -->
             <div class="running_contents">
@@ -186,12 +186,12 @@
                     <div class="swiper-wrapper">
                         <!-- JS 작성 -->
                         <!-- <div class="swiper-slide">
-                            <p class="item_thum">백그라운드 이미지</p>
+                            <p class="item_thum">img</p>
                             <div class="item_contents">
                                 <p class="item_name"></p>
                                 <p class="item_price"></p>
                             </div>
-                            <button type="button" id="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
+                            <button type="button" class="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
                         </div> -->
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                     </div>
                 </div>
                 <!-- 액세서리 -->
-                <div class="swiper running_accessory_swiper">
+                <div class="swiper running_acc_swiper">
                     <div class="swiper-wrapper">
                         <!-- JS 작성 -->
                     </div>
@@ -210,28 +210,28 @@
             </div><!-- e:running_contents -->
         </section>
         <!-- 6행 컬렉션 -->
-        <section class="collection">
-            <a href="#">
+        <section class="collection_container flex-row">
+            <a href="#" class="yoga_coll">
                 <h2>Yoga&Pilates Collection</h2>
-                <p >가벼운 Nulu™ 원단의 루스한 핏으로 원하는 감각에만 온전히 집중해 보세요.</p>
-                <!-- more js -->
+                <p class="contents">가벼운 Nulu™ 원단의 루스한 핏으로 원하는 감각에만 온전히 집중해 보세요.</p>
+                <p class="more_btn more_g">more <img src="./images/more.png" alt="더보기"></p>
             </a>
-            <a href="#">
+            <a href="#" class="abc_coll">
                 <h2>ABC Collection</h2>
-                <p>탁월한 신축성, 편안함, 통기성을 지금 바로 경험해 보세요.</p>
-                <!-- more js -->
+                <p class="contents">탁월한 신축성, 편안함, 통기성을 지금 바로 경험해 보세요.</p>
+                <p class="more_btn more_g">more <img src="./images/more.png" alt="더보기"></p>
             </a>
         </section>
         <!-- 7행 데일리 웨어 -->
-        <section>
-            <a href="#">
+        <section class="daily_container flex-row">
+            <a href="#" class="daily_bnr flex-col">
                 <h2>Daily wear</h2>
-                <p>평일부터 주말까지 아우르는 데일리 아이템</p>
-                <!-- more js -->
+                <p class="contents">평일부터 주말까지 아우르는 데일리 아이템</p>
+                <p class="more_btn">more <img src="./images/more.png" alt="더보기"></p>
             </a>
             <!-- 상품 스와이퍼 -->
             <div class="daily_contents">
-                <div class="daily_category_menu">
+                <div class="daily_tab_menu tab_g">
                     <a href="#" class="active">Woman</a>
                     <a href="#">Man</a>
                 </div>
@@ -240,12 +240,12 @@
                     <div class="swiper-wrapper">
                         <!-- JS 작성 -->
                         <!-- <div class="swiper-slide">
-                            <p class="item_thum">백그라운드 이미지</p>
+                            <p class="item_thum">img</p>
                             <div class="item_contents">
                                 <p class="item_name"></p>
                                 <p class="item_price"></p>
                             </div>
-                            <button type="button" id="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
+                            <button type="button" class="wish_btn"><img src="./images/wish.svg" alt="위시리스트"></button>
                         </div> -->
                     </div>
                 </div>
@@ -258,17 +258,17 @@
             </div><!-- e:daily_contents -->
         </section>
         <!-- 8행 광고 배너-->
-        <section>
+        <section class="ad_container">
             <div class="ad_bnr_txt">
                 <h2>Best Review Event</h2>
                 <p>온라인 스토어에서 구매한 상품의 리뷰를 남겨주세요.<br>매월 5분께 룰루레몬 e 기프트 카드를 드립니다.</p>
             </div>
-            <p><!-- img 백그라운드 --></p>
+            <p><img src="#" alt=""></p>
         </section>
         <!-- 9행 shop the look-->
-        <section>
+        <section class="look_container">
             <h2>Shop The Look</h2>
-            <p>룰루레몬으로 완성한 나만의 스타일을 @lululemonkr 또는 #lululemon을 태그해 인스타그램에 공유해 보세요.</p>
+            <p class="contents">룰루레몬으로 완성한 나만의 스타일을 @lululemonkr 또는 #lululemon을 태그해 인스타그램에 공유해 보세요.</p>
         </section>
         <div class="swiper look_swiper">
                     <div class="swiper-wrapper">
@@ -283,7 +283,7 @@
                     </div>
                 </div>
         <!-- 10행 브랜드스토리-->
-        <section>
+        <section class="brand_container">
             <p><img src="./images/bnr/brand_l.jpg" alt=""></p>
             <div class="brand_contents">
                 <p class="logo"><img src="./images/bnr/brand_r.jpg" alt=""></p>
