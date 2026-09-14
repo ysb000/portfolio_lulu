@@ -27,6 +27,13 @@ header .util_menu .language_selector span em {}
 header .util_menu .language_selector img {}
 header .util_menu a {}
 /* -------------------------------main */
+/* 공통 디자인 */
+main h2 {
+    font-size:var(--d-font-title-md);
+    font-weight:var(--font-weight-md);
+}
+
+/* -------------------------------------------- */
 /* 메인배너 */
 main {}
 main .hero_bnr {}
@@ -50,42 +57,51 @@ main .hero_bnr .bnr_title_contents {
 main .hero_bnr .bnr_title_contents * {color:var(--color-light);}
 main .hero_bnr .bnr_title_contents h1 {
     font-size:var(--d-font-title-lg);
-    font-weight:var(--font-weight);
+    font-weight:var(--font-weight-md);
     margin-bottom:var(--d-spacing-lg);
 }
 main .hero_bnr .bnr_title_contents p {font-size:var(--d-font-contents-lg);}
 /* 3행 카테고리 */
-main .category .activity_category{}
-main .category .activity_category li {}
-main .category .activity_category li a{}
-main .category .activity_category li a img {}
-main .category .activity_category li a span {}
+main .activity_category{
+    justify-content:center; gap:60px;
+    margin:var(--d-spacing-xxl) 0;
+}
+main .activity_category li {text-align:center;}
+main .activity_category li a{display:block; width:120px;}
+main .activity_category li a .thum {width:100%;}
+main .activity_category li a .category {
+    display:block; margin-top:var(--d-spacing-sm);
+}
 /* 4행 베스트 셀러 */
+main .best_seller {padding:80px 100px;}
 main .best_seller h2{}
-main .best_seller .best_category_more{}
-main .best_seller .best_category_more .best_category_menu{}
-main .best_seller .best_category_more .best_category_menu a{}
-main .best_seller .best_category_more .best_category_menu .active{}
+main .best_seller .best_tab_more{margin:var(--d-spacing-lg) 0 var(--d-spacing-md)}
+main .best_seller .best_tab_more .best_tab_menu{}
+main .best_seller .best_tab_more .best_tab_menu a{}
+main .best_seller .best_tab_more .best_tab_menu .active{}
 /* more_btn */
-main .best_seller .best_category_more p{}
-main .best_seller .best_category_more p .more_btn{}
-/* swiper */
+main .best_seller .best_tab_more .more_btn{}
+main .best_seller .best_tab_more .more_btn img {width:12px;}
+/* 전체 스와이퍼 */
 main .best_seller .best_contents{}
-/* woman */
+/* 여성 스와이퍼 */
+/* swiper */
 main .best_seller .best_contents .best_woman_swiper{}
+/* swiper-wrapper */
 main .best_seller .best_contents .best_woman_swiper .swiper-wrapper{}
+/* swiper-slide */
 main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide{}
-main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide p {}
-main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide {}
-main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .item_contents{}
-main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .item_contents .item_name{}
-main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .item_contents .item_price{}
-main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide .wish{}
-/* man */
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide a{display:block; width:320px;}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide a .item_thum {}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide a .item_thum img {width:100%;}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide a .item_contents{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide a .item_contents .item_name{}
+main .best_seller .best_contents .best_woman_swiper .swiper-wrapper .swiper-slide a .item_contents .item_price{}
+/* 남성 스와이프 */
 main .best_seller .best_contents .best_man_swiper{}
 main .best_seller .best_contents .best_man_swiper .swiper-wrapper{}
 main .best_seller .best_contents .best_man_swiper .swiper-wrapper .swiper-slide{}
-/* acce */
+/* 악세서리 스와이프 */
 main .best_seller .best_contents .best_accessory_swiper{}
 main .best_seller .best_contents .best_accessory_swiper .swiper-wrapper{}
 main .best_seller .best_contents .best_accessory_swiper .swiper-wrapper .swiper-slide{}
@@ -93,9 +109,9 @@ main .best_seller .best_contents .best_accessory_swiper .swiper-wrapper .swiper-
 main .running {}
 main .running .running_bnr {}
 main .running .running_bnr h2 {}
-main .running .running_category_menu {}
-main .running .running_category_menu a {}
-main .running .running_category_menu .active {}
+main .running .running_tab_menu {}
+main .running .running_tab_menu a {}
+main .running .running_tab_menu .active {}
 /* 상품 */
 main .running .running_contents {}
 /* 여성 */

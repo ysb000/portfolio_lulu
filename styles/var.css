@@ -23,7 +23,7 @@
     --d-font-contents-sm:0.875rem; /* 14px */
     --d-font-contents-xs:0.75rem; /* 12px */
     
-    --font-weight:500; /* Medium */
+    --font-weight-md:500; /* Medium */
     
     --d-font-line-height: 1.5;
     /* 태블릿 */
@@ -41,4 +41,18 @@
     display:flex; 
     flex-flow:row nowrap; 
     justify-content: space-between; align-items:center;
+}
+
+.tab_g {
+    display:flex; flex-flow:row nowrap; gap:var(--d-spacing-xs);
+}
+
+.tab_active_btn{
+    width:105px; text-align: center; padding:6px 0; 
+    border:1px solid #000; 
+}
+.tab_btn{
+    width:105px; text-align: center; padding:6px 0; 
+    border:1px solid var(--color-icon);
+    color:var(--color-mute); 
 }
