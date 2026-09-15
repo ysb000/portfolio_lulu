@@ -7,7 +7,7 @@
     --color-light:#ffffff; /* 배경, 글씨 */
     --color-gray:#f0f0f0; /* 회색배경, 카테고리 버튼 */
 
-    --color-menu:#666; /* 진한 회색, 글자 */
+    --color-menu:#777; /* 진한 회색, 글자 */
     --color-mute:#a9a9a9; /* 비활성화 메뉴 */
     --color-icon:#c7c7c7; 
     
@@ -25,7 +25,7 @@
     
     --font-weight-md:500; /* Medium */
     
-    --d-font-line-height: 1.5;
+    --font-line-height: 1.5;
     /* 태블릿 */
     /* 모바일 */
     /* 여백 */
