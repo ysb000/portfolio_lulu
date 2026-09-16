@@ -262,8 +262,9 @@ best_tab_menu.forEach((o, i)=>{
     o.addEventListener('click',()=>{
         resetFunc(best_tab_menu);
         o.classList.add('active');
+        console.log(o,i);
 
         resetFunc(best_contents);
         best_contents[i].classList.add('active');
     })
-})
+})›

@@ -353,7 +353,7 @@ main .brand_container .brand_contents .more_btn {
 }
 main .brand_container .brand_contents .more_btn img {width:12px; filter: invert();}
 /* --------------------------------------------11행 풋터 */
-footer {padding:var(--d-spacing-xxl) 100px;}
+footer {padding:var(--d-spacing-xxl) 100px; width:100%;}
 footer .left_g {}
 /* left_top */
 footer .left_g .left_top{gap:90px; align-items:flex-start; margin-bottom:var(--d-spacing-xl);}
@@ -387,7 +387,14 @@ footer .left_g .left_top .contect .contents_g .btn #store_search_btn{}
 /*left_btm */
 footer .left_g .left_btm {}
 footer .left_g .left_btm * {font-size:var(--d-font-contents-xs); color:var(--color-mute);}
-footer .left_g .left_btm p{}
+footer .left_g .left_btm p{justify-content:flex-start; gap:var(--d-spacing-xs);}
+footer .left_g .left_btm p a {position: relative;;}
+footer .left_g .left_btm p a::after {
+    content:""; display:block; width:1px; height:12px;
+    background-color:var(--color-mute);
+    position:absolute; left:-13%; top:50%; transform: translateY(-50%); 
+}
+footer .left_g .left_btm p a:nth-child(1)::after {display:none;}
 footer .left_g .left_btm p a{}
 footer .left_g .left_btm .information {
     margin-top:var(--d-spacing-xs);
