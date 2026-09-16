@@ -1,4 +1,4 @@
-/* 커밋 var.css */
+/* var.css */
 :root{
     /* 색상 */
     --color-primary: #D0092A; /* 포인트, 버튼 */
@@ -56,3 +56,9 @@
 .more_g {
     display:flex; gap:4px; align-items:flex-end;
 }
+
+main .best_container .best_tab_more  .best_tab_menu > .active {
+    border:1px solid var(--color-btn); color:var(--color-btn); 
+}
+
+main .best_container .best_contents > .active {display:block;}

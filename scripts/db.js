@@ -236,7 +236,7 @@ const accBestDb = [
     },
     {
         num: 2,
-        thum: 'images/item/4-22.jpg',
+        thum: 'images/item/4-17.jpg', //4-22 같은 제품
         item_name: '더 매트 5mm 천연고무 사용',
         item_price: '125,000원'
     },

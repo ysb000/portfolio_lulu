@@ -1,4 +1,3 @@
-//커맛
 //index.js
 //html 생성 및 삽입
 //nav
@@ -16,6 +15,9 @@ const daily_woman_swiper = document.querySelector('.daily_woman_swiper');
 const daily_man_swiper = document.querySelector('.daily_man_swiper');
 
 const look_swiper = document.querySelector('.look_swiper');
+
+const best_tab_menu = document.querySelectorAll('.best_tab_more .best_tab_menu > a');
+const best_contents = document.querySelectorAll('.best_contents > .swiper');
 //=================================반복문
 //4행 
 //여성
@@ -37,7 +39,6 @@ for(let w of womanBestDb){
     `;
     best_woman_swiper.children[0].append(best_woman_slide);
 }
-
 //남성
 for(let m of manBestDb){
     const best_man_slide = document.createElement('div');
@@ -56,7 +57,6 @@ for(let m of manBestDb){
     `;
     best_man_swiper.children[0].append(best_man_slide);
 }
-
 //액세서리
 for(let a of accBestDb){
     const best_acc_slide = document.createElement('div');
@@ -75,6 +75,7 @@ for(let a of accBestDb){
     `;
     best_acc_swiper.children[0].append(best_acc_slide);
 }
+
 //5행 러닝컬렉션
 //여성
 for(let w of woman_runningDB){
@@ -95,7 +96,6 @@ for(let w of woman_runningDB){
     `;
     running_woman_swiper.children[0].append(running_woman_slide);
 }
-
 //남성
 for(let m of man_runningDB){
     const running_man_slide = document.createElement('div');
@@ -114,7 +114,6 @@ for(let m of man_runningDB){
     `;
     running_man_swiper.children[0].append(running_man_slide);
 }
-
 //액세서리
 for(let a of acc_runningDB){
     const running_acc_slide = document.createElement('div');
@@ -194,22 +193,27 @@ for(let l of snsDb){
 const best_woman_swiper_func = new Swiper(best_woman_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
+    observer: true,        // DOM 변화 감지 후 재계산
+    observeParents: true,  // 부모 요소 변화 감지 후 재계산
 }); //swiper 플러그인 함수 최종 연결
-
 const best_man_swiper_func = new Swiper(best_man_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
+    observer: true,        // DOM 변화 감지 후 재계산
+    observeParents: true,  // 부모 요소 변화 감지 후 재계산
 }); //swiper 플러그인 함수 최종 연결
 const best_acc_swiper_func = new Swiper(best_acc_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
+    observer: true,        // DOM 변화 감지 후 재계산
+    observeParents: true,  // 부모 요소 변화 감지 후 재계산
 }); //swiper 플러그인 함수 최종 연결
+
 //5행
 const running_woman_swiper_func = new Swiper(running_woman_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
 }); //swiper 플러그인 함수 최종 연결
-
 const running_man_swiper_func = new Swiper(running_man_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
@@ -228,7 +232,6 @@ const daily_woman_swiper_func = new Swiper(daily_woman_swiper, {
     fill: 'row',    // 좌->우 순서로 채우기 ('column'으로 하면 위->아래 순서)
     },
 }); //swiper 플러그인 함수 최종 연결
-
 const daily_man_swiper_func = new Swiper(daily_man_swiper, {
      slidesPerView:3, //보이는 개수
     spaceBetween:20, //여백
@@ -237,8 +240,31 @@ const daily_man_swiper_func = new Swiper(daily_man_swiper, {
     fill: 'row',    // 좌->우 순서로 채우기 ('column'으로 하면 위->아래 순서)
     },
 }); //swiper 플러그인 함수 최종 연결
+
 //9행
 const look_swiper_func = new Swiper(look_swiper, {
     slidesPerView:4, //보이는 개수
     spaceBetween:20, //여백
 }); //swiper 플러그인 함수 최종 연결
+
+//함수 
+//reset함수
+function resetFunc(target){
+    for(let reset of target){
+        reset.classList.remove('active');
+    }
+}
+// resetFunc(best_tab_menu)
+//이벤트
+//탭 클릭 시 상품 레이아웃 변경
+//베스트셀러
+best_tab_menu.forEach((o, i)=>{
+    // console.log(o, i);
+    o.addEventListener('click',()=>{
+        resetFunc(best_tab_menu);
+        o.classList.add('active');
+
+        resetFunc(best_contents);
+        best_contents[i].classList.add('active');
+    })
+})
