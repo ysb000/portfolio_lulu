@@ -1,8 +1,7 @@
 //index.js
-//html 생성 및 삽입
-//nav
-//4행
-//=================================변수
+
+// =================================변수
+// =================================4행
 const best_woman_swiper = document.querySelector('.best_woman_swiper');
 const best_man_swiper = document.querySelector('.best_man_swiper');
 const best_acc_swiper = document.querySelector('.best_acc_swiper');
@@ -18,8 +17,8 @@ const look_swiper = document.querySelector('.look_swiper');
 
 const best_tab_menu = document.querySelectorAll('.best_tab_more .best_tab_menu > a');
 const best_contents = document.querySelectorAll('.best_contents > .swiper');
-//=================================반복문
-//4행 
+//================================= html 생성&반복문
+//================================= 4행 베스트셀러
 //여성
 for(let w of womanBestDb){
     // console.log(w);
@@ -76,7 +75,7 @@ for(let a of accBestDb){
     best_acc_swiper.children[0].append(best_acc_slide);
 }
 
-//5행 러닝컬렉션
+//================================= 5행 러닝컬렉션
 //여성
 for(let w of woman_runningDB){
     // console.log(w);
@@ -133,7 +132,7 @@ for(let a of acc_runningDB){
     running_acc_swiper.children[0].append(running_acc_slide);
 }
 
-//7행 데일리웨어
+//================================= 7행 데일리웨어
 //여성
 for(let w of womanDailyDb){
     const daily_woman_slide = document.createElement('div');
@@ -189,7 +188,7 @@ for(let l of snsDb){
     look_swiper.children[0].append(look_slide);
 }
 //=================================스와이퍼 연결
-//4행
+//================================= 4행
 const best_woman_swiper_func = new Swiper(best_woman_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
@@ -209,7 +208,7 @@ const best_acc_swiper_func = new Swiper(best_acc_swiper, {
     observeParents: true,  // 부모 요소 변화 감지 후 재계산
 }); //swiper 플러그인 함수 최종 연결
 
-//5행
+//================================= 5행
 const running_woman_swiper_func = new Swiper(running_woman_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
@@ -223,7 +222,7 @@ const running_acc_swiper_func = new Swiper(running_acc_swiper, {
     spaceBetween:30, //여백
 }); //swiper 플러그인 함수 최종 연결
 
-//7행
+//================================= 7행
 const daily_woman_swiper_func = new Swiper(daily_woman_swiper, {
     slidesPerView:3, //보이는 개수
     spaceBetween:20, //여백
@@ -241,21 +240,21 @@ const daily_man_swiper_func = new Swiper(daily_man_swiper, {
     },
 }); //swiper 플러그인 함수 최종 연결
 
-//9행
+//================================= 9행
 const look_swiper_func = new Swiper(look_swiper, {
     slidesPerView:4, //보이는 개수
     spaceBetween:20, //여백
 }); //swiper 플러그인 함수 최종 연결
 
-//함수 
+//================================= 함수 
 //reset함수
 function resetFunc(target){
     for(let reset of target){
         reset.classList.remove('active');
     }
 }
-// resetFunc(best_tab_menu)
-//이벤트
+
+//================================= 이벤트
 //탭 클릭 시 상품 레이아웃 변경
 //베스트셀러
 best_tab_menu.forEach((o, i)=>{
