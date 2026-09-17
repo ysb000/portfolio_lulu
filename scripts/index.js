@@ -198,14 +198,10 @@ const best_woman_swiper_func = new Swiper(best_woman_swiper, {
 const best_man_swiper_func = new Swiper(best_man_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
-    observer: true,        // DOM 변화 감지 후 재계산
-    observeParents: true,  // 부모 요소 변화 감지 후 재계산
 }); //swiper 플러그인 함수 최종 연결
 const best_acc_swiper_func = new Swiper(best_acc_swiper, {
     slidesPerView:5, //보이는 개수
     spaceBetween:30, //여백
-    observer: true,        // DOM 변화 감지 후 재계산
-    observeParents: true,  // 부모 요소 변화 감지 후 재계산
 }); //swiper 플러그인 함수 최종 연결
 
 //================================= 5행
@@ -262,6 +258,7 @@ best_tab_menu.forEach((o, i)=>{
     o.addEventListener('click',()=>{
         resetFunc(best_tab_menu);
         o.classList.add('active');
+        console.log(o,i);
 
         resetFunc(best_contents);
         best_contents[i].classList.add('active');
