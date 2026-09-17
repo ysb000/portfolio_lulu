@@ -36,7 +36,7 @@
     --d-spacing-xl:50px;
     --d-spacing-xxl:80px;
 }
-
+/* flex */
 .flex-row {
     display:flex; 
     flex-flow:row nowrap; 
@@ -48,7 +48,7 @@
     flex-flow:column nowrap;
     justify-content:center; align-items:flex-start;
 }
-
+/* btn_g */
 .tab_g {
     display:flex; flex-flow:row nowrap; gap:var(--d-spacing-xs);
 }
@@ -56,9 +56,11 @@
 .more_g {
     display:flex; gap:4px; align-items:flex-end;
 }
-
-main .best_container .best_tab_more  .best_tab_menu > .active {
+/* active */
+main .best_container .best_tab_more  .best_tab_menu > .active,
+main .daily_container .daily_contents .daily_tab_menu > .active {
     border:1px solid var(--color-btn); color:var(--color-btn); 
 }
 
 main .best_container .best_contents > .active {display:block;}
+
