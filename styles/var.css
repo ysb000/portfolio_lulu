@@ -62,5 +62,5 @@ main .daily_container .daily_contents .daily_tab_menu > .active {
     border:1px solid var(--color-btn); color:var(--color-btn); 
 }
 
-main .best_container .best_contents > .active {display:block;}
+main .best_container .best_contents .active {display:block;}
 
