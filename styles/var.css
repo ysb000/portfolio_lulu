@@ -58,9 +58,17 @@
 }
 /* active */
 main .best_container .best_tab_more  .best_tab_menu > .active,
-main .daily_container .daily_contents .daily_tab_menu > .active {
+main .daily_container .daily_tab_contents .daily_tab_menu > .active {
     border:1px solid var(--color-btn); color:var(--color-btn); 
 }
 
-main .best_container .best_contents .active {display:block;}
+main .running_container .running_tab_menu .active {
+    background-color:var(--color-light); color:var(--color-btn);
+    font-weight:var(--font-weight-md);
+}
+
+main .best_container .best_contents > .active,
+main .running_container .running_contents > .active,
+main .daily_container .daily_tab_contents .daily_contents > .active
+{display:block !important;}
 

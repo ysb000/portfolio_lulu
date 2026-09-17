@@ -82,12 +82,9 @@ main .best_container .best_tab_more .more_btn {}
 main .best_container .best_tab_more .more_btn img {width:100%}
 /* --------------------------------------------상품 */
 main .best_container .best_contents{}
-/* --------------------------------------------swiper 초기 숨기기 */
-main .best_container .best_contents .best_man_swiper, 
-main .best_container .best_contents .best_acc_swiper{display:none;}
 /* --------------------------------------------베스트 swiper */
 main .best_container .best_contents .swiper{
-    width:100%; max-width:1720px; margin:0 auto;
+    width:100%; max-width:1720px; margin:0 auto; display:none;
 }
 /* swiper-wrapper */
 main .best_container .best_contents .swiper .swiper-wrapper{}
@@ -139,18 +136,11 @@ main .running_container .running_tab_menu a {
     width:105px; text-align: center; padding:6px 0; 
     background-color:var(--color-btn); color:var(--color-light);
 }
-main .running_container .running_tab_menu .active {
-    background-color:var(--color-light); color:var(--color-btn);
-    font-weight:var(--font-weight-md);
-}
 /* --------------------------------------------상품 */
 main .running_container .running_contents {}
-/* --------------------------------------------swiper 초기 숨기기 */
-main .running_container .running_contents .running_man_swiper,
-main .running_container .running_contents .running_acc_swiper {display:none;}
 /* --------------------------------------------러닝 swiper */
 main .running_container .running_contents .swiper {
-    width:100%; max-width:1720px; margin:var(--d-spacing-md) 100px;
+    width:100%; max-width:1720px; margin:var(--d-spacing-md) 100px; display:none;
 }
 /* swiper-wrapper */
 main .running_container .running_contents .swiper .swiper-wrapper{}
@@ -209,41 +199,39 @@ main .daily_container .daily_bnr h2{}
 main .daily_container .daily_bnr .more_btn{}
 main .daily_container .daily_bnr .more_btn img{width:100%;}
 /* --------------------------------------------상품 */
-main .daily_container .daily_contents {}
+main .daily_container .daily_tab_contents {}
 /* 탭 메뉴 */
-main .daily_container .daily_contents .daily_tab_menu{margin-bottom:var(--d-spacing-md);}
-main .daily_container .daily_contents .daily_tab_menu a{
+main .daily_container .daily_tab_contents .daily_tab_menu{margin-bottom:var(--d-spacing-md);}
+main .daily_container .daily_tab_contents .daily_tab_menu a{
     width:105px; text-align: center; padding:6px 0; 
     border:1px solid var(--color-icon); color:var(--color-mute); 
 }
-/* --------------------------------------------swiper 초기 숨기기 */
-main .daily_container .daily_contents .daily_man_swiper .swiper-wrapper .swiper-slide{display:none;}
 /* --------------------------------------------swiper */
-main .daily_container .daily_contents .swiper {max-width:904px; flex:1;}
+main .daily_container .daily_tab_contents .daily_contents .swiper {max-width:904px; flex:1; display:none;}
 /* --------------------------------------------swiper-wrapper */
-main .daily_container .daily_contents .swiper .swiper-wrapper {}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper {}
 /* --------------------------------------------swiper-slide */
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide {width:288px; position:relative;}
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a {}
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {}
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum img {width:100%;}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide {width:288px; position:relative;}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum img {width:100%;}
 /* --------------------------------------------hover */
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a:hover .item_contents{display:flex;}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a:hover .item_contents{display:flex;}
 /* 상품명+가격 */
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents * {color:var(--color-light);}
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents{
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents * {color:var(--color-light);}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents{
     padding:var(--d-spacing-sm) var(--d-spacing-xs);
     display:none; flex-flow:column nowrap; gap:var(--d-spacing-xs); width:100%;
     position:absolute; bottom:0; left:0; background-color:var(--bg-blur-txt); 
 }
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents .item_name{
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents .item_name{
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents .item_price{font-weight:var(--font-weight-md);}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents .item_price{font-weight:var(--font-weight-md);}
 /* 위시버튼 */
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide .wish_btn{
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide .wish_btn{
     position:absolute; right:15px; top:15px; width:24px;
 }
-main .daily_container .daily_contents .swiper .swiper-wrapper .swiper-slide .wish_btn img {width:100%;}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide .wish_btn img {width:100%;}
 /* --------------------------------------------8행 이벤트 배너 */
 main .ad_container {padding:var(--d-spacing-xxl) 0;}
 main .ad_container a {
