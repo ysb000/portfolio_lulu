@@ -145,6 +145,43 @@ function slideFunc(db, swiper){
     }
 }
 
+//nav
+function subMenuFunc(wrap, db) {
+    const container = document.querySelector(wrap);
+    const dataList = navDb[db];
+
+    if (!container || !dataList) return;
+
+    let totalHtml = '';
+
+    for (const data of dataList) {
+        let linksHtml = '';
+        
+        for (const item of data.items) {
+        linksHtml += `<a href="#">${item}</a>`;
+        }
+
+        const titleHtml = data.category ? `<h3 class="category-title"><a href="#">${data.category}</a></h3>` : '';
+        
+        // titleHtml을 li 안에 함께 삽입
+        totalHtml += `
+        <li>
+            ${titleHtml}
+            <div class="items_categoey flex-col">${linksHtml}</div>
+        </li>
+        `;
+    }
+
+    container.innerHTML = totalHtml;
+}
+
+// 클래스명과 DB 키 이름을 각각 전달
+subMenuFunc('.woman_open_wrap', 'woman');
+// subMenuFunc('.man_open_wrap', 'man');
+// subMenuFunc('.acc_open_wrap', 'acc');
+// subMenuFunc('.new_open_wrap', 'new');
+// subMenuFunc('.commu_open_wrap', 'commu');
+
 //reset함수
 function resetFunc(target){
     for(let reset of target){

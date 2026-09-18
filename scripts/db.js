@@ -3,7 +3,7 @@
 // GNB 상세 네비게이션 메뉴 데이터베이스
 const navDb = {
   // 1. 여성
-    women: [
+    woman: [
         {
         category: 'Featured',
         items: ['New', 'Best Seller', 'Running Collection', 'Pants Collection', 'Yoga&Pilates Collection', 'Summer Collection', 'Iconic Style', 'Only Online', 'We Made Too Much']
@@ -35,7 +35,7 @@ const navDb = {
     ],
 
     // 2. 남성
-    men: [
+    man: [
         {
         category: 'Featured',
         items: ['New', 'Best Seller', 'Running Collection', 'Pants Collection', 'Summer Collection', 'ABC Collection', 'Iconic Style', 'Only Online', 'We Made Too Much']
@@ -67,7 +67,7 @@ const navDb = {
     ],
 
     // 3. 액세서리
-    accessories: [
+    acc: [
         {
         category: 'Featured',
         items: ['New', 'Best Seller', 'Bag Collection', 'We Made Too Much']
@@ -83,19 +83,19 @@ const navDb = {
     ],
 
     // 4. 신제품
-    newItems: [
-        { name: '전체 신제품', link: '#' },
-        { name: '여성 신제품', link: '#' },
-        { name: '남성 신제품', link: '#' },
-        { name: '액세서리 신제품', link: '#' }
+    new: [
+        { category: '전체 신제품', items: '' },
+        { category: '여성 신제품', items: '' },
+        { category: '남성 신제품', items: '' },
+        { category: '액세서리 신제품', items: '' }
     ],
 
     // 5. 커뮤니티
-    community: [
-        { name: '브랜드 스토리', link: '#' },
-        { name: '앰배서더 소개', link: '#' },
-        { name: '소셜 임팩트', link: '#' },
-        { name: '채용', link: '#' }
+    commu: [
+        { category: '브랜드 스토리', items: '' },
+        { category: '앰배서더 소개', items: '' },
+        { category: '소셜 임팩트', items: '' },
+        { category: '채용', items: '' }
     ]
 };
 

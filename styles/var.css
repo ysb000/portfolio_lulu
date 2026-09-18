@@ -70,5 +70,5 @@ main .running_container .running_tab_menu .active {
 main .best_container .best_contents > .active,
 main .running_container .running_contents > .active,
 main .daily_container .daily_tab_contents .daily_contents > .active
-{display:flex !important;}
+{display:block;}
 
