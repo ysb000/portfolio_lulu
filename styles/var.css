@@ -72,3 +72,16 @@ main .running_container .running_contents > .active,
 main .daily_container .daily_tab_contents .daily_contents > .active
 {display:block;}
 
+header .nav > li > ul.active {display:flex;}
+
+.wrap_v1 {
+    background-color:var(--color-light); width:100%; border:2px solid #f0f;
+    padding: 30px 0 40px; gap:30px; align-items:flex-start; justify-content:center;
+    position:absolute; left:0; top:50px; display:none;
+}
+
+.wrap_v2 {
+    background-color:var(--color-light); width:100%; border:2px solid #f0f;
+    padding: 20px 0; gap:60px; justify-content:center;
+    position:absolute; left:0; top:50px; display:none;
+}

@@ -1,6 +1,10 @@
 //index.js
 
 // =================================변수
+// =================================nav
+const nav = document.querySelectorAll('.nav > li');
+const sub = document.querySelectorAll('.nav > li > ul');
+
 // =================================스와이퍼
 const best_woman_swiper = document.querySelector('.best_woman_swiper');
 const best_man_swiper = document.querySelector('.best_man_swiper');
@@ -115,6 +119,12 @@ const look_swiper_func = new Swiper(look_swiper, {
     spaceBetween:20, //여백
 }); //swiper 플러그인 함수 최종 연결
 
+//서브메뉴
+subMenuFunc('.woman_open_wrap', 'woman');
+subMenuFunc('.man_open_wrap', 'man');
+subMenuFunc('.acc_open_wrap', 'acc');
+subMenuFunc('.new_open_wrap', 'new');
+subMenuFunc('.commu_open_wrap', 'commu');
 //============================================================= 이벤트
 //탭 클릭 시 상품 레이아웃 변경
 //베스트셀러
@@ -123,6 +133,11 @@ tabEventFunc(best_tab_menu, best_contents,
 tabEventFunc(running_tab_menu, running_contents, 
     [running_woman_swiper_func, running_man_swiper_func, running_acc_swiper_func]);
 tabEventFunc(daily_tab_menu, daily_contents, [daily_woman_swiper_func, daily_man_swiper_func]);
+
+nav.forEach((o, i)=>{
+    o.addEventListener('mouseover',()=>{})
+
+})
 
 //============================================================= 함수
 //swiper 생성 함수
@@ -149,38 +164,53 @@ function slideFunc(db, swiper){
 function subMenuFunc(wrap, db) {
     const container = document.querySelector(wrap);
     const dataList = navDb[db];
-
-    if (!container || !dataList) return;
+    //저장된 데이터가 배열 목록인지 검사, 아니라면 함수 중단
+    if (!container || !Array.isArray(dataList)) return;
 
     let totalHtml = '';
 
     for (const data of dataList) {
-        let linksHtml = '';
-        
-        for (const item of data.items) {
-        linksHtml += `<a href="#">${item}</a>`;
+        // 케이스 1: groups가 있는 경우 (이너웨어 + 패션잡화 한 열 묶음)
+        if (data.groups) {
+        let groupContent = '';
+
+        for (const group of data.groups) {
+            let groupLinks = '';
+            if (Array.isArray(group.items)) {
+            for (const item of group.items) {
+                groupLinks += `<a href="#">${item}</a>`;
+            }
+            }
+
+            groupContent += `
+            <div class="sub_g">
+                <h3 class="category-title"><a href="#">${group.category}</a></h3>
+                ${groupLinks ? `<div class="items_categoey flex-col">${groupLinks}</div>` : ''}
+            </div>
+            `;
         }
 
+        totalHtml += `<li>${groupContent}</li>`;
+    } else { // 케이스 2: 일반 단일 열 (신제품, 커뮤니티, 일반 카테고리)
+        let linksHtml = '';
+        if (Array.isArray(data.items)) {
+            for (const item of data.items) {
+            linksHtml += `<a href="#">${item}</a>`;
+        }}
         const titleHtml = data.category ? `<h3 class="category-title"><a href="#">${data.category}</a></h3>` : '';
-        
-        // titleHtml을 li 안에 함께 삽입
-        totalHtml += `
-        <li>
-            ${titleHtml}
-            <div class="items_categoey flex-col">${linksHtml}</div>
-        </li>
-        `;
-    }
+        const itemsContainerHtml = linksHtml ? `<div class="items_categoey flex-col">${linksHtml}</div>` : '';
 
+        totalHtml += `
+            <li>
+            ${titleHtml}
+            ${itemsContainerHtml}
+            </li>
+        `;
+        }
+    }
     container.innerHTML = totalHtml;
 }
-
-// 클래스명과 DB 키 이름을 각각 전달
-subMenuFunc('.woman_open_wrap', 'woman');
-// subMenuFunc('.man_open_wrap', 'man');
-// subMenuFunc('.acc_open_wrap', 'acc');
-// subMenuFunc('.new_open_wrap', 'new');
-// subMenuFunc('.commu_open_wrap', 'commu');
+        
 
 //reset함수
 function resetFunc(target){
