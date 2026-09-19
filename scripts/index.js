@@ -30,7 +30,7 @@ const running_contents = document.querySelectorAll('.running_contents > .swiper'
 const daily_contents = document.querySelectorAll('.daily_contents > .swiper');
 //================================= html 생성&반복문
 //================================= 4행 베스트셀러
-// //여성
+//여성
 slideFunc(womanBestDb, best_woman_swiper);
 //남성
 slideFunc(manBestDb, best_man_swiper);
@@ -134,10 +134,23 @@ tabEventFunc(running_tab_menu, running_contents,
     [running_woman_swiper_func, running_man_swiper_func, running_acc_swiper_func]);
 tabEventFunc(daily_tab_menu, daily_contents, [daily_woman_swiper_func, daily_man_swiper_func]);
 
-nav.forEach((o, i)=>{
-    o.addEventListener('mouseover',()=>{})
+//nav 동작
+for(let s of sub){
+    s.style.opacity= '0';
+    s.style.visibility = 'hidden';
+    s.style.transition = 'opacity 0.4s';
+}
 
-})
+for(let n of nav){
+    n.addEventListener('mouseover',()=>{
+        n.children[1].style.opacity = '1';
+        n.children[1].style.visibility= 'visible';
+    })
+    n.addEventListener('mouseout',()=>{
+        n.children[1].style.opacity = '0';
+        n.children[1].style.visibility= 'hidden';
+    })
+}
 
 //============================================================= 함수
 //swiper 생성 함수
