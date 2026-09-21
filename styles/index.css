@@ -116,7 +116,7 @@ main .best_container .best_contents .swiper{}
 /* swiper-wrapper */
 main .best_container .best_contents .swiper .swiper-wrapper{}
 /* swiper-slide */
-main .best_container .best_contents .swiper .swiper-wrapper .swiper-slide {position:relative; width:320px;}
+main .best_container .best_contents .swiper .swiper-wrapper .swiper-slide {position:relative;}
 main .best_container .best_contents .swiper .swiper-wrapper .swiper-slide a {display:block;}
 /* 이미지 */
 main .best_container .best_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {}

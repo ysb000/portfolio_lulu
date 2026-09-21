@@ -30,7 +30,7 @@ const running_contents = document.querySelectorAll('.running_contents > .swiper'
 const daily_contents = document.querySelectorAll('.daily_contents > .swiper');
 //================================= html 생성&반복문
 //================================= 4행 베스트셀러
-//여성
+// //여성
 slideFunc(womanBestDb, best_woman_swiper);
 //남성
 slideFunc(manBestDb, best_man_swiper);
@@ -138,7 +138,7 @@ tabEventFunc(daily_tab_menu, daily_contents, [daily_woman_swiper_func, daily_man
 for(let s of sub){
     s.style.opacity= '0';
     s.style.visibility = 'hidden';
-    s.style.transition = 'opacity 0.4s';
+    s.style.transition = 'opacity 0.8s';
 }
 
 for(let n of nav){
@@ -174,27 +174,24 @@ function slideFunc(db, swiper){
 }
 
 //nav
-function subMenuFunc(wrap, db) {
+function subMenuFunc(wrap, db){
     const container = document.querySelector(wrap);
     const dataList = navDb[db];
     //저장된 데이터가 배열 목록인지 검사, 아니라면 함수 중단
-    if (!container || !Array.isArray(dataList)) return;
+    if(!container || !Array.isArray(dataList)) return;
 
     let totalHtml = '';
 
-    for (const data of dataList) {
+    for(const data of dataList) {
         // 케이스 1: groups가 있는 경우 (이너웨어 + 패션잡화 한 열 묶음)
-        if (data.groups) {
+        if(data.groups) {
         let groupContent = '';
 
-        for (const group of data.groups) {
-            let groupLinks = '';
-            if (Array.isArray(group.items)) {
-            for (const item of group.items) {
-                groupLinks += `<a href="#">${item}</a>`;
-            }
-            }
+        for(const group of data.groups) {
 
+            let groupLinks = '';
+            if(Array.isArray(group.items)){
+            for(const item of group.items) {groupLinks += `<a href="#">${item}</a>`;}}
             groupContent += `
             <div class="sub_g">
                 <h3 class="category-title"><a href="#">${group.category}</a></h3>
@@ -204,10 +201,11 @@ function subMenuFunc(wrap, db) {
         }
 
         totalHtml += `<li>${groupContent}</li>`;
-    } else { // 케이스 2: 일반 단일 열 (신제품, 커뮤니티, 일반 카테고리)
+
+    } else{ // 케이스 2: 일반 단일 열 (신제품, 커뮤니티, 일반 카테고리)
         let linksHtml = '';
-        if (Array.isArray(data.items)) {
-            for (const item of data.items) {
+        if(Array.isArray(data.items)){
+            for(const item of data.items){
             linksHtml += `<a href="#">${item}</a>`;
         }}
         const titleHtml = data.category ? `<h3 class="category-title"><a href="#">${data.category}</a></h3>` : '';
