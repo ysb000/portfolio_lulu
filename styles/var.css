@@ -22,12 +22,27 @@
     --d-font-contents-md:1rem; /* 16px 기본*/
     --d-font-contents-sm:0.875rem; /* 14px */
     --d-font-contents-xs:0.75rem; /* 12px */
+    /* 태블릿 */
+    --t-font-title-lg:2.75rem; /* 44px 대제목 */
+    --t-font-title-md:1.875rem; /* 30px 중제목 */
+    --t-font-title-sm:1.25rem; /* 20px 소제목 */
+    
+    --t-font-contents-lg:1rem; /* 16px 기본*/
+    --t-font-contents-md:0.875rem; /* 14px 기본*/
+    --t-font-contents-sm:0.75rem; /* 12px */
+    /* 모바일 */
+    --m-font-title-lg:1.5rem; /* 24px 대제목 */
+    --m-font-title-md:1.25rem; /* 20px 중제목 */
+    
+    --m-font-contents-lg:0.875rem; /* 14px */
+    --m-font-contents-md:0.75rem; /* 12px */
+    --m-font-contents-xs:0.625rem; /* 10px */
+    --m-font-contents-xxs:0.5rem; /* 8px */
     
     --font-weight-md:500; /* Medium */
     
     --font-line-height: 1.5;
-    /* 태블릿 */
-    /* 모바일 */
+
     /* 여백 */
     --d-spacing-xs:10px;
     --d-spacing-sm:16px;

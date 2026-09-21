@@ -69,55 +69,143 @@ for(let l of snsDb){
 //=============================================================스와이퍼 연결
 //================================= 4행
 const best_woman_swiper_func = new Swiper(best_woman_swiper, {
-    slidesPerView:5, //보이는 개수
+    slidesPerView:2.2, //보이는 개수
     spaceBetween:30, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 4, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 5,
+            },
+        }
+}); 
 const best_man_swiper_func = new Swiper(best_man_swiper, {
-    slidesPerView:5, //보이는 개수
+    slidesPerView:2.2, //보이는 개수
     spaceBetween:30, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 4, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 5,
+            },
+        }
+}); 
 const best_acc_swiper_func = new Swiper(best_acc_swiper, {
-    slidesPerView:5, //보이는 개수
+    slidesPerView:2.2, //보이는 개수
     spaceBetween:30, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 4, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 5,
+            },
+        }
+}); 
 
 //================================= 5행
 const running_woman_swiper_func = new Swiper(running_woman_swiper, {
-    slidesPerView:5, //보이는 개수
+    slidesPerView:2.2, //보이는 개수
     spaceBetween:30, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 4, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 5,
+            },
+        }
+}); 
 const running_man_swiper_func = new Swiper(running_man_swiper, {
-    slidesPerView:5, //보이는 개수
+    slidesPerView:2.2, //보이는 개수
     spaceBetween:30, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 4, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 5,
+            },
+        }
+}); 
 const running_acc_swiper_func = new Swiper(running_acc_swiper, {
-    slidesPerView:5, //보이는 개수
+    slidesPerView:2.2, //보이는 개수
     spaceBetween:30, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 4, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 5,
+            },
+        }
+}); 
 
 //================================= 7행
 const daily_woman_swiper_func = new Swiper(daily_woman_swiper, {
     slidesPerView:3, //보이는 개수
     spaceBetween:20, //여백
     grid: {
-    rows: 2,        // 세로 2줄 (총 6개 노출)
-    fill: 'row',    // 좌->우 순서로 채우기 ('column'으로 하면 위->아래 순서)
+        rows: 2,
+        fill: 'row',
     },
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 2, 
+            grid: {
+                rows: 3,
+                fill: 'row',
+            },
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView:3,
+            grid: {
+                rows: 2,
+                fill: 'row',
+                },
+        },
+    }
+}); 
 const daily_man_swiper_func = new Swiper(daily_man_swiper, {
-     slidesPerView:3, //보이는 개수
+    slidesPerView:3, //보이는 개수
     spaceBetween:20, //여백
     grid: {
-    rows: 2,        // 세로 2줄 (총 6개 노출)
-    fill: 'row',    // 좌->우 순서로 채우기 ('column'으로 하면 위->아래 순서)
+        rows: 2,
+        fill: 'row',
     },
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 2, 
+            grid: {
+                rows: 3,
+                fill: 'row',
+            },
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView:3,
+            grid: {
+                rows: 2,
+                fill: 'row',
+                },
+        },
+    }
+}); 
 
 //================================= 9행
 const look_swiper_func = new Swiper(look_swiper, {
-    slidesPerView:4, //보이는 개수
+    slidesPerView:2, //보이는 개수
     spaceBetween:20, //여백
-}); //swiper 플러그인 함수 최종 연결
+    breakpoints: { //반응형 조건 속성
+        760: { //760 이상일 경우
+            slidesPerView: 3, //레이아웃 2열
+        },
+        1200: { //1200 이상일 경우
+            slidesPerView: 4,
+            },
+        }
+}); 
 
 //서브메뉴
 subMenuFunc('.woman_open_wrap', 'woman');
