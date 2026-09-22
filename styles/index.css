@@ -185,16 +185,16 @@ main .collection_container a .contents {margin:var(--d-spacing-md) 0 var(--d-spa
 main .collection_container a .more_btn {}
 main .collection_container a .more_btn img {filter:invert();}
 /* ----------------------------------------------------------------7행 데일리웨어 */
-main .daily_container {padding:var(--d-spacing-xxl) 100px; gap:50px; height:948px;}
+main .daily_container {padding:var(--d-spacing-xxl) 100px; gap:50px; height:max-content}
 main .daily_container .daily_bnr {
     background-image:url(../images/bnr/daliy_bnr.jpg);
     background-position:center; background-size:cover; 
-    width:100%; min-width:372px; height:100%; 
+    width:100%; height:100%; display:block;
     padding:var(--d-spacing-lg); justify-content:flex-start; align-items:flex-start; gap:var(--d-spacing-sm);
 }
 main .daily_container .daily_bnr h2{}
 main .daily_container .daily_bnr .more_btn{}
-main .daily_container .daily_bnr .more_btn img{width:100%;}
+main .daily_container .daily_bnr .more_btn img{width:12px;}
 /* --------------------------------------------상품 */
 main .daily_container .daily_tab_contents {}
 /* 탭 메뉴 */
@@ -206,8 +206,8 @@ main .daily_container .daily_tab_contents .daily_contents .swiper {width:100%; m
 main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper {}
 /* --------------------------------------------swiper-slide */
 main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide {position:relative;}
-main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {display:block;}
-main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {display:block; overflow:hidden; height:320px;object-fit:cover;}
+main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {height:100%;}
 main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum img {width:100%;}
 /* --------------------------------------------hover */
 main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a:hover .item_contents{opacity:1;}
