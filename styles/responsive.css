@@ -181,20 +181,23 @@
 
     main .swiper .swiper-wrapper .swiper-slide .wish_btn{width:20px;}
     /* ----------------------------------------------------------------2행 메인 */
-    main .hero_bnr a .img{height:400px;}
+    main .hero_bnr a .img{height:60vh;}
     main .hero_bnr .bnr_title_contents h1 {font-size:var(--m-font-title-lg);}
     main .hero_bnr .bnr_title_contents p {font-size:var(--m-font-contents-lg);}
     /* ----------------------------------------------------------------3행 카테고리 */
-    main .activity_category{gap:30px; margin:20px 50px; flex-flow:wrap;}
+    main .activity_category{gap:20px; margin:20px 50px; flex-flow:wrap;}
     main .activity_category li a span {font-size:var(--m-font-contents-md);}
     /* ----------------------------------------------------------------4행 베스트 셀러 */
     main .best_container .best_tab_more{margin:20px 0 16px;}
     main .best_container .best_tab_more .best_tab_menu {gap:6px;}
-    main .best_container .best_tab_more .best_tab_menu a{font-size:var(--m-font-contents-xs);}
+    main .best_container .best_tab_more .best_tab_menu a{font-size:var(--m-font-contents-xxs); }
 
     /* ----------------------------------------------------------------5행 러닝 컬렉션 */
-    main .running_container .running_bnr {padding:0 20px; height:200px;}
-    main .running_container .running_bnr .contents {margin:0 20px; font-size:var(--m-font-contents-md);}
+    main .running_container .running_bnr {padding:0 15px; height:200px;}
+    main .running_container .running_bnr .contents {
+        margin:10px 0 20px; font-size:var(--m-font-contents-md);
+
+    }
     /* 탭 메뉴 */
     main .running_container .running_tab_menu {left:15px;}
     main .running_container .running_tab_menu a {width:60px; font-size:var(--m-font-contents-xs);}
@@ -203,24 +206,28 @@
     /* ----------------------------------------------------------------6행 collection */
     main .collection_container {padding:40px 0;}
     /* 공통 디자인 */
-    main .collection_container a {padding:20px; height:280px;}
+    main .collection_container a {padding:20px; height:260px;}
     /* 텍스트 */
+    main .collection_container a h2 {line-height:1.3;}
     main .collection_container a .contents {display:none;}
+    main .collection_container a .more_btn {margin-top:10px;}
+    main .collection_container a .more_btn img {filter:invert();}
     /* ----------------------------------------------------------------7행 데일리웨어 */
     main .daily_container {padding:20px 0; gap:10px;}
     main .daily_container .daily_bnr {gap:14px; height:200px; background-position:0 20%;}
-    main .daily_container .daily_bnr .more_btn img{width:10px;}
+    main .daily_container .daily_bnr .contents {font-size:var(--m-font-contents-md);}   
+    main .daily_container .daily_bnr .more_btn img {width:10px;}
     /* --------------------------------------------상품 */
     /* 탭 메뉴 */
     main .daily_container .daily_tab_contents .daily_tab_menu{margin-bottom:6px;}
-    main .daily_container .daily_tab_contents .daily_tab_menu a{font-size:var(--m-font-contents-xs);}
+    main .daily_container .daily_tab_contents .daily_tab_menu a{margin:10px 0 20px; font-size:var(--m-font-contents-xs);}
     /* --------------------------------------------swiper */
-    main .daily_container .daily_tab_contents .daily_contents .swiper {width:100%; max-width:372px;}
+    main .daily_container .daily_tab_contents .daily_contents .swiper {width:100%; max-width:460px;}
     /* --------------------------------------------swiper-wrapper */
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper {}
     /* --------------------------------------------swiper-slide */
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide {position:relative;}
-    main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {display:block; height:150px;}
+    main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {display:block; height:300px;}
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {height:100%;}
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum img {width:100%; object-fit:cover;}
     /* 상품명+가격 */

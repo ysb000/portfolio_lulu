@@ -192,6 +192,7 @@ main .daily_container .daily_bnr {
     padding:var(--d-spacing-lg); justify-content:flex-start; align-items:flex-start; gap:var(--d-spacing-sm);
 }
 main .daily_container .daily_bnr h2{}
+main .daily_container .daily_bnr .contetns {}
 main .daily_container .daily_bnr .more_btn{}
 main .daily_container .daily_bnr .more_btn img{width:12px;}
 /* --------------------------------------------상품 */
