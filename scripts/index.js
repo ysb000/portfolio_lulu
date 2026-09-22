@@ -70,37 +70,43 @@ for(let l of snsDb){
 //================================= 4행
 const best_woman_swiper_func = new Swiper(best_woman_swiper, {
     slidesPerView:2.2, //보이는 개수
-    spaceBetween:30, //여백
+    spaceBetween:6, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
             slidesPerView: 4, //레이아웃 2열
+            spaceBetween:20, //여백
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 5,
+            spaceBetween:30, //여백
             },
         }
 }); 
 const best_man_swiper_func = new Swiper(best_man_swiper, {
     slidesPerView:2.2, //보이는 개수
-    spaceBetween:30, //여백
+    spaceBetween:6, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
             slidesPerView: 4, //레이아웃 2열
+            spaceBetween:20, //여백
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 5,
+            spaceBetween:30, //여백
             },
         }
 }); 
 const best_acc_swiper_func = new Swiper(best_acc_swiper, {
     slidesPerView:2.2, //보이는 개수
-    spaceBetween:30, //여백
+    spaceBetween:6, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
             slidesPerView: 4, //레이아웃 2열
+            spaceBetween:20, //여백
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 5,
+            spaceBetween:30, //여백
             },
         }
 }); 
@@ -108,37 +114,43 @@ const best_acc_swiper_func = new Swiper(best_acc_swiper, {
 //================================= 5행
 const running_woman_swiper_func = new Swiper(running_woman_swiper, {
     slidesPerView:2.2, //보이는 개수
-    spaceBetween:30, //여백
+    spaceBetween:6, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
-            slidesPerView: 4, //레이아웃 2열
+            spaceBetween:10, //여백
+            slidesPerView: 5, //레이아웃 2열
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 5,
+            spaceBetween:30, //여백
             },
         }
 }); 
 const running_man_swiper_func = new Swiper(running_man_swiper, {
     slidesPerView:2.2, //보이는 개수
-    spaceBetween:30, //여백
+    spaceBetween:6, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
-            slidesPerView: 4, //레이아웃 2열
+            spaceBetween:10, //여백
+            slidesPerView: 5, //레이아웃 2열
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 5,
+            spaceBetween:30, //여백
             },
         }
 }); 
 const running_acc_swiper_func = new Swiper(running_acc_swiper, {
     slidesPerView:2.2, //보이는 개수
-    spaceBetween:30, //여백
+    spaceBetween:6, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
-            slidesPerView: 4, //레이아웃 2열
+            slidesPerView: 5, //레이아웃 2열
+            spaceBetween:10, //여백
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 5,
+            spaceBetween:30, //여백
             },
         }
 }); 
@@ -146,21 +158,23 @@ const running_acc_swiper_func = new Swiper(running_acc_swiper, {
 //================================= 7행
 const daily_woman_swiper_func = new Swiper(daily_woman_swiper, {
     slidesPerView:3, //보이는 개수
-    spaceBetween:20, //여백
+    spaceBetween:6, //여백
     grid: {
         rows: 2,
         fill: 'row',
     },
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
-            slidesPerView: 2, 
+            slidesPerView: 3, 
+            spaceBetween:20, //여백
             grid: {
-                rows: 3,
+                rows: 2,
                 fill: 'row',
             },
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView:3,
+            spaceBetween:20, //여백
             grid: {
                 rows: 2,
                 fill: 'row',
@@ -177,13 +191,13 @@ const daily_man_swiper_func = new Swiper(daily_man_swiper, {
     },
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
-            slidesPerView: 2, 
+            slidesPerView: 3, 
             grid: {
-                rows: 3,
+                rows: 2,
                 fill: 'row',
             },
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView:3,
             grid: {
                 rows: 2,
@@ -201,7 +215,7 @@ const look_swiper_func = new Swiper(look_swiper, {
         760: { //760 이상일 경우
             slidesPerView: 3, //레이아웃 2열
         },
-        1200: { //1200 이상일 경우
+        1024: { //1024 이상일 경우
             slidesPerView: 4,
             },
         }
