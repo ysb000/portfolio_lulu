@@ -193,43 +193,38 @@
     main .best_container .best_tab_more .best_tab_menu a{font-size:var(--m-font-contents-xs);}
 
     /* ----------------------------------------------------------------5행 러닝 컬렉션 */
-    main .running_container .running_bnr {padding:0 60px; height:300px;}
-    main .running_container .running_bnr .contents {margin:20px 0 30px; font-size:var(--t-font-contents-md);}
+    main .running_container .running_bnr {padding:0 20px; height:200px;}
+    main .running_container .running_bnr .contents {margin:0 20px; font-size:var(--m-font-contents-md);}
     /* 탭 메뉴 */
-    main .running_container .running_tab_menu {left:60px;}
-    main .running_container .running_tab_menu a {width:90px; font-size:var(--t-font-contents-md);}
+    main .running_container .running_tab_menu {left:15px;}
+    main .running_container .running_tab_menu a {width:60px; font-size:var(--m-font-contents-xs);}
     /* ----------------------------------------------------------------상품 */
-    main .running_container .running_contents {margin:20px 60px;}
+    main .running_container .running_contents {margin:8px 10px;}
     /* ----------------------------------------------------------------6행 collection */
     main .collection_container {padding:40px 0;}
     /* 공통 디자인 */
-    main .collection_container a {padding:20px; height:480px;}
+    main .collection_container a {padding:20px; height:280px;}
     /* 텍스트 */
-    main .collection_container a .contents {margin:10px 0 20px;}
+    main .collection_container a .contents {display:none;}
     /* ----------------------------------------------------------------7행 데일리웨어 */
-    main .daily_container {padding:40px 0; gap:20px; flex-flow:column nowrap; align-items: center;}
-    main .daily_container .daily_bnr {gap:14px; height:300px; background-position:0 20%; justify-content:center;}
+    main .daily_container {padding:20px 0; gap:10px;}
+    main .daily_container .daily_bnr {gap:14px; height:200px; background-position:0 20%;}
     main .daily_container .daily_bnr .more_btn img{width:10px;}
     /* --------------------------------------------상품 */
     /* 탭 메뉴 */
-    main .daily_container .daily_tab_contents .daily_tab_menu{margin-bottom:16px;}
-    main .daily_container .daily_tab_contents .daily_tab_menu a{font-size:var(--t-font-contents-md);}
+    main .daily_container .daily_tab_contents .daily_tab_menu{margin-bottom:6px;}
+    main .daily_container .daily_tab_contents .daily_tab_menu a{font-size:var(--m-font-contents-xs);}
     /* --------------------------------------------swiper */
-    main .daily_container .daily_tab_contents .daily_contents .swiper {width:100%; max-width:904px;}
+    main .daily_container .daily_tab_contents .daily_contents .swiper {width:100%; max-width:372px;}
     /* --------------------------------------------swiper-wrapper */
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper {}
     /* --------------------------------------------swiper-slide */
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide {position:relative;}
-    main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {display:block; height:360px;}
+    main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a {display:block; height:150px;}
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum {height:100%;}
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_thum img {width:100%; object-fit:cover;}
-    /* --------------------------------------------hover */
-    main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a:hover .item_contents{opacity:1;}
     /* 상품명+가격 */
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents * {color:var(--color-light);}
-    main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents{
-        opacity:0; position:absolute; bottom:0; left:0; background-color:var(--bg-blur-txt); transition:opacity 0.6s;
-    }
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents .item_name{}
     main .daily_container .daily_tab_contents .daily_contents .swiper .swiper-wrapper .swiper-slide a .item_contents .item_price{}
     /* 위시버튼 */
