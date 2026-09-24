@@ -186,11 +186,11 @@
     main .hero_bnr .bnr_title_contents p {font-size:var(--m-font-contents-lg);}
     /* ----------------------------------------------------------------3행 카테고리 */
     main .activity_category{gap:20px; margin:20px 50px; flex-flow:wrap;}
-    main .activity_category li a span {font-size:var(--m-font-contents-md);}
+    main .activity_category li a span {font-size:var(--m-font-contents-md); font-weight:var(--font-weight-md);}
     /* ----------------------------------------------------------------4행 베스트 셀러 */
     main .best_container .best_tab_more{margin:20px 0 16px;}
     main .best_container .best_tab_more .best_tab_menu {gap:6px;}
-    main .best_container .best_tab_more .best_tab_menu a{font-size:var(--m-font-contents-xxs); }
+    main .best_container .best_tab_more .best_tab_menu a{font-size:var(--m-font-contents-xs); }
 
     /* ----------------------------------------------------------------5행 러닝 컬렉션 */
     main .running_container .running_bnr {padding:0 15px; height:200px;}
