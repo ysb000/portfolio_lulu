@@ -1,6 +1,11 @@
 //index.js
 
 // =================================변수
+
+
+const responsive_menu = document.querySelector('.responsive_menu');
+const res_close_btn = document.querySelector('#res_close_btn');
+const res_menu_btn = document.querySelector('.menu_btn');
 // =================================nav
 const nav = document.querySelectorAll('.nav > li');
 const sub = document.querySelectorAll('.nav > li > ul');
@@ -29,6 +34,96 @@ const best_contents = document.querySelectorAll('.best_contents > .swiper');
 const running_contents = document.querySelectorAll('.running_contents > .swiper');
 const daily_contents = document.querySelectorAll('.daily_contents > .swiper');
 //================================= html 생성&반복문
+
+//const navDb = {woman: [{category: 'Featured',}]} 속성 배열 속성의 값
+// for(let i of navDb.woman){
+//     // console.log(i.category);
+//     console.log(i.groups);
+
+// }
+// for(let i of navDb.woman){
+    
+// }
+// i.category && console.log(i.category, i.items);
+// i.groups && i.groups.forEach(g => console.log(g.category, g.items));
+
+resMenuFunc(navDb.woman, '.woman_res_menu_wrap');
+resMenuFunc(navDb.man, '.man_res_menu_wrap');
+resMenuFunc(navDb.acc, '.acc_res_menu_wrap');
+resMenuFunc(navDb.new, '.new_res_menu_wrap');
+resMenuFunc(navDb.commu, '.commu_res_menu_wrap');
+
+function resMenuFunc(db, wrap){
+    const container = document.querySelector(wrap);
+    for (const i of db) {
+        if(i.category){
+            const li = document.createElement('li');
+            li.classList.add('m_category')
+    
+            let itemHtml = '';
+            for(const item of i.items){
+                itemHtml += `<li class="s_category"><a href="#">${item}</a></li>`;
+            }
+            
+            li.innerHTML = `
+                <a href="#">${i.category}</a>
+                <ul class="s_category_wrap">
+                    ${itemHtml}
+                </ul>
+            `;
+            
+            container.appendChild(li);        
+}
+        if(i.groups){
+            for (const g of i.groups) {
+                const li = document.createElement('li');
+                li.classList.add('m_category')
+                
+                let itemHtml = '';
+                for (const item of g.items) {
+                    itemHtml += `<li class="s_category"><a href="#">${item}</a></li>`;
+                }
+    
+                li.innerHTML = `
+                    <a href="#">${g.category}</a>
+                    <ul class="s_category_wrap">
+                        ${itemHtml}
+                    </ul>
+                `;
+                
+                container.appendChild(li);        
+            }
+        }
+    }
+}
+
+
+// // 1. 전체 메뉴의 부모에게 딱 한 번만 이벤트 등록
+// document.querySelector('.responsive_menu').addEventListener('click', (e) => {
+    
+//     // 2. 대분류(<a>)를 클릭했을 때
+//     const mainLink = e.target.closest('.res_menu_wrap > li > a');
+//     if (mainLink) {
+//         e.preventDefault();
+//         const subMenu = mainLink.nextElementSibling;
+//         if (subMenu) {
+//             subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+//         }
+//         return;
+//     }
+
+//     // 3. 중분류(.m_category > a)를 클릭했을 때
+//     const subLink = e.target.closest('.m_category > a');
+//     if (subLink) {
+//         e.preventDefault();
+//         const sCategoryWrap = subLink.nextElementSibling;
+//         if (sCategoryWrap) {
+//             sCategoryWrap.style.display = sCategoryWrap.style.display === 'block' ? 'none' : 'block';
+//         }
+//         return;
+//     }
+// });
+
 //================================= 4행 베스트셀러
 // //여성
 slideFunc(womanBestDb, best_woman_swiper);
@@ -210,13 +305,14 @@ const daily_man_swiper_func = new Swiper(daily_man_swiper, {
 //================================= 9행
 const look_swiper_func = new Swiper(look_swiper, {
     slidesPerView:2, //보이는 개수
-    spaceBetween:20, //여백
+    spaceBetween:10, //여백
     breakpoints: { //반응형 조건 속성
         760: { //760 이상일 경우
             slidesPerView: 3, //레이아웃 2열
         },
         1024: { //1024 이상일 경우
             slidesPerView: 4,
+            spaceBetween:20, //여백
             },
         }
 }); 
@@ -349,4 +445,67 @@ function tabEventFunc(tabB, itemC, swiperList= []){
             }
         });
     });
+}
+
+
+// //햄버거 메뉴
+const mainC = document.querySelectorAll('.res_menu_wrap > li > a');
+const mediumC = document.querySelectorAll('.res_menu_wrap li > ul[class*=res]')
+const mediumC = document.querySelectorAll('.res_menu_wrap li > ul[class*=res] li')
+const minorC = document.querySelectorAll('res_menu_wrap .s_category_wrap')
+
+console.log(mainC, mediumC, minorC);
+
+//태블릿, 모바일 햄버거 메뉴 클릭 시 메뉴 오픈
+res_menu_btn.addEventListener('click',()=>{
+    responsive_menu.style.display = 'flex';
+})
+res_close_btn.addEventListener('click',()=>{
+    responsive_menu.style.display = 'none';
+})
+
+mainC.forEach((target, i)=>{
+    target.addEventListener('click',()=>{
+        // mediumC[i].style.display = 'block';
+        
+        //현재 클릭한 중분류 확인
+        const currentClick = mediumC[i];
+        if(!currentClick) return;
+        
+        //현재 중분류가 열려있는지 확인
+        const c_open = currentClick.style.display ==='block';
+
+        mediumC.forEach((h)=>{
+            h.style.display = 'none';
+        });
+        if(!c_open){currentClick.style.display = 'block'};
+    })
+})
+
+// 2. 중분류 클릭 시 소분류 토글 (동적 생성 대응형 이벤트 위임)
+document.querySelector('.responsive_menu').addEventListener('click', (e) => {
+    // 중분류 링크(.m_category > a)를 클릭했는지 확인
+    const mediumLink = e.target.closest('.m_category > a');
+    if (!mediumLink) return;
+
+    e.preventDefault(); // a 링크 이동 방지
+
+    // 바로 다음 형제 요소인 소분류 박스(s_category_wrap) 찾기
+    const minorWrap = mediumLink.nextElementSibling;
+    if (minorWrap && minorWrap.classList.contains('s_category_wrap')) {
+        const isOpen = minorWrap.style.display === 'block';
+
+        // 같은 중분류 그룹 내 다른 소분류들은 일단 전부 닫기
+        const parentUl = mediumLink.closest('ul');
+        if (parentUl) {
+            parentUl.querySelectorAll('.s_category_wrap').forEach(wrap => {
+                wrap.style.display = 'none';
+            });
+        }
+
+        // 닫혀있었다면 이번에 클릭한 소분류만 열기
+        if (!isOpen) {
+            minorWrap.style.display = 'block';
+        }
+    }
 }

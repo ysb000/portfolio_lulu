@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/responsive.css">
-    <!-- JS -->
-    <script src="./scripts/index.js" defer></script>
-    <script src="./scripts/db.js"></script>
     <!-- swiper -->
     <!--swiper 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -29,7 +26,63 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+<!-- JS -->
+<script src="./scripts/index.js" defer></script>
+<script src="./scripts/db.js"></script>
 <body>
+    <!-- 반응형 웹 햄버거 메뉴 -->
+    <div class="responsive_menu">
+        <p class="res_close_btn"><button type="button" id="res_close_btn"><img src="./images/close.svg" alt="메뉴 닫기"></button></p>
+        <div class="res_top_menu flex-row">
+            <!-- 유틸 메뉴 -->
+            <div class="res_util_menu">
+                <a href="#">Login</a>
+                <a href="#">Join</a>
+                <a href="#">Wish</a>
+            </div>
+            <!-- 언어 선택 -->
+            <a class="language_select">
+                <span> 
+                    <img src="./images/world.svg" alt="">
+                    <em>KOR</em>
+                </span>
+                <img src="./images/down.svg" alt="언어선택열기" class="language_open">
+            </a>
+        </div>
+        <!-- 햄버거 메뉴 -->
+        <ul class="res_menu_wrap">
+            <li><a href="#">Woman</a>
+                <ul class="woman_res_menu_wrap">
+                    <!-- js 처리 -->
+                    <!-- <li><a href="#">Featured</a>
+                        <ul>
+                            <li>yoga collection</li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </li>
+            <li><a href="#">Man</a>
+                <ul class="man_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+            <li><a href="#">Accesoory</a>
+                <ul class="acc_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+            <li><a href="#">New</a>
+                <ul class="new_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+            <li><a href="#">Community</a>
+                <ul class="commu_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+        </ul>
+    </div>    
     <!-- ================================1행 헤더 -->
     <header class="flex-row">
         <!-- 1-1 로고 -->
@@ -289,7 +342,7 @@
         <!-- 9행 shop the look-->
         <section class="look_container">
             <h2>Shop The Look</h2>
-            <p class="contents">룰루레몬으로 완성한 나만의 스타일을 @lululemonkr 또는 #lululemon을 태그해 인스타그램에 공유해 보세요.</p>
+            <p class="contents"><span>룰루레몬으로 완성한 나만의 스타일을</span> @lululemonkr 또는 #lululemon을 태그해 인스타그램에 공유해 보세요.<span></span></p>
             <div class="swiper look_swiper">
                         <div class="swiper-wrapper">
                             <!-- JS 작성 -->
@@ -305,7 +358,7 @@
         </section>
         <!-- 10행 브랜드스토리-->
         <section class="brand_container flex-row">
-            <p class="brand_bnr"><img src="./images/bnr/brand_l.jpg" alt=""></p>
+            <p class="brand_bnr brand1"><!-- <img src="./images/bnr/brand_l.jpg" alt=""> --></p>
             <a href="#" class="brand_contents flex-col">
                 <p class="logo"><img src="./images/logo_v2.png" alt=""></p>
                 <h2>The Sweatlife</h2>
@@ -316,7 +369,7 @@
                 </div>
                 <p class="more_btn more_g">Brand story <img src="./images/more.svg" alt="더보기"></p>
             </a>
-            <p class="brand_bnr"><img src="./images/bnr/brand_r.jpg" alt=""></p>
+            <p class="brand_bnr brand2"><!-- <img src="./images/bnr/brand_r.jpg" alt=""> --></p>
         </section>
     </main>
     <!-- ================================풋터-->
@@ -363,7 +416,7 @@
                     <a href="#">개인정보처리방침</a>
                     <a href="#">이용약관</a>
                     <a href="#">사이트맵</a>
-                    <a href="#"></a>
+                    <a href="#">회사정보</a>
                 </p>
                 <p class="information">
                 룰루레몬애틀라티카코리아 유한회사 | 대표 포레스트 엘리어트 해리스 주니어 | 서울시 강남구 봉은사로 468, 11층 (삼성동)<br>
