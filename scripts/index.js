@@ -449,12 +449,9 @@ function tabEventFunc(tabB, itemC, swiperList= []){
 
 
 // //햄버거 메뉴
-const mainC = document.querySelectorAll('.res_menu_wrap > li > a');
+const mainC_li = document.querySelectorAll('.res_menu_wrap > li > a');
 const mediumC = document.querySelectorAll('.res_menu_wrap li > ul[class*=res]')
-const mediumC = document.querySelectorAll('.res_menu_wrap li > ul[class*=res] li')
-const minorC = document.querySelectorAll('res_menu_wrap .s_category_wrap')
-
-console.log(mainC, mediumC, minorC);
+// console.log(mainC_li, mediumC, mediumC_li, minorC);
 
 //태블릿, 모바일 햄버거 메뉴 클릭 시 메뉴 오픈
 res_menu_btn.addEventListener('click',()=>{
@@ -464,7 +461,7 @@ res_close_btn.addEventListener('click',()=>{
     responsive_menu.style.display = 'none';
 })
 
-mainC.forEach((target, i)=>{
+mainC_li.forEach((target, i)=>{
     target.addEventListener('click',()=>{
         // mediumC[i].style.display = 'block';
         
@@ -478,34 +475,8 @@ mainC.forEach((target, i)=>{
         mediumC.forEach((h)=>{
             h.style.display = 'none';
         });
-        if(!c_open){currentClick.style.display = 'block'};
+        if(!c_open){
+            currentClick.style.display = 'block'
+        };
     })
 })
-
-// 2. 중분류 클릭 시 소분류 토글 (동적 생성 대응형 이벤트 위임)
-document.querySelector('.responsive_menu').addEventListener('click', (e) => {
-    // 중분류 링크(.m_category > a)를 클릭했는지 확인
-    const mediumLink = e.target.closest('.m_category > a');
-    if (!mediumLink) return;
-
-    e.preventDefault(); // a 링크 이동 방지
-
-    // 바로 다음 형제 요소인 소분류 박스(s_category_wrap) 찾기
-    const minorWrap = mediumLink.nextElementSibling;
-    if (minorWrap && minorWrap.classList.contains('s_category_wrap')) {
-        const isOpen = minorWrap.style.display === 'block';
-
-        // 같은 중분류 그룹 내 다른 소분류들은 일단 전부 닫기
-        const parentUl = mediumLink.closest('ul');
-        if (parentUl) {
-            parentUl.querySelectorAll('.s_category_wrap').forEach(wrap => {
-                wrap.style.display = 'none';
-            });
-        }
-
-        // 닫혀있었다면 이번에 클릭한 소분류만 열기
-        if (!isOpen) {
-            minorWrap.style.display = 'block';
-        }
-    }
-}

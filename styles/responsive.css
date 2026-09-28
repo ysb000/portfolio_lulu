@@ -190,57 +190,13 @@
 @media screen and (max-width:760px){
     /* index.css */
     /* 햄버거 메뉴 클릭 시 오픈 */
-    .responsive_menu {
-    position:absolute; z-index:999; top:0; right:0;
-    background-color:var(--color-light) ;
-    height:max-content; width:100%; padding:30px 20px; 
-    display:flex; flex-flow:column nowrap; gap:30px;
-    }
-    /* 닫기 버튼 */
-    .responsive_menu .res_close_btn {display:flex; justify-content:flex-end;}
-    .responsive_menu .res_close_btn #res_close_btn {}
-    /*top 메뉴 */
-    .responsive_menu .res_top_menu {}
-    /* 유틸메뉴 */
-    .responsive_menu .res_top_menu .res_util_menu {}
-    .responsive_menu .res_top_menu .res_util_menu a {display:inline-block; padding:4px 12px; position:relative;}
-    .responsive_menu .res_top_menu .res_util_menu a:nth-child(1)::after {display:none;}
-    .responsive_menu .res_top_menu .res_util_menu a::after {
-        content:''; display:block; width:1px; height:100%; 
-        background-color: var(--color-icon); 
-        position:absolute; top:0; left:0%;
-    }
-    /* 언어 선택 */
-    .responsive_menu .res_top_menu .language_select {display:flex; align-items:center; gap:6px;}
-    .responsive_menu .res_top_menu .language_select span {display:flex; align-items:center; gap:4px;}
-    .responsive_menu .res_top_menu .language_select span > img {}
-    .responsive_menu .res_top_menu .language_select span em {font-size:var(--d-font-contents-sm);}
-    .responsive_menu .res_top_menu .language_select > img {}
+    .responsive_menu {width:100%; padding:58px 20px; gap:20px;}
     /* 반응형 메뉴 */
     /* 대분류 */
-    .responsive_menu .res_menu_wrap {}
-    .responsive_menu .res_menu_wrap li {}
-    .responsive_menu .res_menu_wrap li a { display:block; position:relative; padding:18px 10px; }
-    .responsive_menu .res_menu_wrap li a::after,
-    .responsive_menu .res_menu_wrap li > ul >li a::after {
-        content:''; width:20px; height:20px; 
-        background-size:cover; 
-        position: absolute; right:30px; top:50%; transform:translateY(-50%);
-    }
+    .responsive_menu .res_menu_wrap li a {padding:14px 10px; }
+    .responsive_menu .res_menu_wrap > li > a { font-size:1rem;}
     /* 중분류 */
-    .responsive_menu .res_menu_wrap > li > a::after,
-    .responsive_menu .res_menu_wrap > li > ul.woman_res_menu_wrap > li.m_category  a::after,
-    .responsive_menu .res_menu_wrap > li > ul.man_res_menu_wrap > li.m_category  a::after,
-    .responsive_menu .res_menu_wrap > li > ul.acc_res_menu_wrap > li.m_category  a::after
-    {background-image:url(../images/show.svg);}
-    .responsive_menu .res_menu_wrap > li > ul {}
-    .responsive_menu .res_menu_wrap > li > ul li.m_category {/* border:1px solid black; */}
-    .responsive_menu .res_menu_wrap > li > ul li.m_category a {padding-left:20px;}
-    /* 소분류 */
-    .responsive_menu .res_menu_wrap > li > ul li.m_category > ul.s_category_wrap {/* border:1px solid red; */}
-    .responsive_menu .res_menu_wrap > li > ul li.m_category > ul.s_category_wrap li.s_category {}
-    .responsive_menu .res_menu_wrap > li > ul li.m_category > ul.s_category_wrap li.s_category a {padding-left:30px;}
-    
+    .responsive_menu .res_menu_wrap > li > ul li.m_category a { font-size:var(--m-font-contents-lg);}
     /* ----------------------------------------------------------------1행 헤더 */
     header {height:36px; padding:0 15px;}
     header .util_menu a * {width:22px;}

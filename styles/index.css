@@ -189,7 +189,7 @@ main .collection_container a .more_btn img {filter:invert();}
 main .daily_container {padding:var(--d-spacing-xxl) 100px; gap:50px; align-items:stretch;}
 main .daily_container .daily_bnr {
     background-image:url(../images/bnr/daliy_bnr.jpg);
-    background-position:center; background-size:cover; width:100%;
+    background-position:center; background-size:cover; width:100%; min-width: 330px;
     padding:var(--d-spacing-lg); justify-content:flex-start; align-items:flex-start; gap:var(--d-spacing-sm);
 }
 main .daily_container .daily_bnr h2{}
