@@ -1,0 +1,248 @@
+<!--  * GitHub Repository Phishing Alert Appeal & Project Verification 
+    이 페이지는 깃허브에서 발생한 피싱 경고 오탐지(False Positive)를 해명하고, 해당 코드가 순수한 학습 및 포트폴리오용임을 증명하기 위해 작성되었습니다.
+ * PROJECT: Portfolio Prototype
+ * WARNING: This script does not process real transactions or user credentials.
+ * All functions are for demonstration purposes only.-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="프리미엄 스포츠웨어 브랜드 룰루레몬과 함께 스웻라이프를 즐겨보세요">
+    <meta name="keywords" content="스포츠, 테니스, 러닝, 필라테스, 요가, 골프, 스포츠웨어, 룰루레몬, 편안한, 부드러운">
+    <title> 그루브 하이라이즈 와이드 레그 팬츠 아시아 핏 | 룰루레몬 </title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/pavicon.png" type="image/x-icon">
+    <!-- 글꼴 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/var.css">
+    <link rel="stylesheet" href="./styles/index.css"> <!-- header, footer -->
+    <link rel="stylesheet" href="./styles/responsive.css"> <!-- 햄버거 메뉴 -->
+    <link rel="stylesheet" href="./styles/item.css">
+    <!-- js -->
+    <script src="./scripts/item.js" defer></script>
+</head>
+    <!-- 반응형 웹 햄버거 메뉴 -->
+    <div class="responsive_menu">
+        <p class="res_close_btn"><button type="button" id="res_close_btn"><img src="./images/close.svg" alt="메뉴 닫기"></button></p>
+        <div class="res_top_menu flex-row">
+            <!-- 유틸 메뉴 -->
+            <div class="res_util_menu">
+                <a href="#">Login</a>
+                <a href="#">Join</a>
+                <a href="#">Wish</a>
+            </div>
+            <!-- 언어 선택 -->
+            <a class="language_select">
+                <span> 
+                    <img src="./images/world.svg" alt="">
+                    <em>KOR</em>
+                </span>
+                <img src="./images/down.svg" alt="언어선택열기" class="language_open">
+            </a>
+        </div>
+        <!-- 햄버거 메뉴 -->
+        <ul class="res_menu_wrap">
+            <li><a href="#">Woman</a>
+                <ul class="woman_res_menu_wrap">
+                    <!-- js 처리 -->
+                    <!-- <li><a href="#">Featured</a>
+                        <ul>
+                            <li>yoga collection</li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </li>
+            <li><a href="#">Man</a>
+                <ul class="man_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+            <li><a href="#">Accesoory</a>
+                <ul class="acc_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+            <li><a href="#">New</a>
+                <ul class="new_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+            <li><a href="#">Community</a>
+                <ul class="commu_res_menu_wrap">
+                    <!-- js 처리 -->
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- =================================header -->    
+    <!-- ================================1행 헤더 -->
+    <header class="flex-row">
+        <!-- 1-1 로고 -->
+        <h1><a href="index.html"><img src="./images/logo.png" alt="룰루레몬"></a></h1>
+        <!-- 1-2 nav -->
+        <ul class="nav flex-row">
+            <!-- 1-2-1 여성 -->
+            <li><a href="#">Woman</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="woman_open_wrap flex-row wrap_v1">
+                    <!-- <li>
+                        <h3 class="category"><a href=#>Featured</a></h3>
+                        <div class="items_categoey">
+                            <a href="#">New</a>
+                            <a href="#">Best Seller</a>
+                            <a href="#">Running Collection</a>
+                            <a href="#">Pants Collection</a>
+                            <a href="#">Yoga&Pilates Collection</a>
+                            <a href="#">Summer Collection</a>
+                            <a href="#">Iconic Style</a>
+                            <a href="#">Only Online</a>
+                            <a href="#">We Made Too Much</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </li>
+            <li><a href="#">Man</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="man_open_wrap flex-row wrap_v1"></ul>
+            </li>
+            <li><a href="#">Accessory</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="acc_open_wrap flex-row wrap_v1"></ul>
+            </li>
+            <li><a href="#">New</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="new_open_wrap flex-row wrap_v2"></ul>
+            </li>
+            <li><a href="#">Community</a>
+                <!-- (위) 호버 시 아래 메뉴 오픈 -->
+                <ul class="commu_open_wrap flex-row wrap_v2 "></ul>
+            </li>
+        </ul><!-- e:nav -->
+        <div class="util_menu flex-row">
+            <a class="language_select">
+                <span> 
+                    <img src="./images/world.svg" alt="">
+                    <em>KOR</em>
+                </span>
+                <img src="./images/down.svg" alt="언어선택열기" class="language_open">
+            </a>
+            <a href="#" class="search_btn"><img src="./images/search.svg" alt="검색하기"></a>
+            <a href="#" class="login_btn"><img src="./images/login.svg" alt="로그인하기"></a>
+            <a href="#" class="wish_btn"><img src="./images/wish.svg" alt="위시리스트 보기"></a>
+            <a href="#" class="cart_btn"><img src="./images/cart.svg" alt="장바구니보기"></a>
+            <a href="#" class="menu_btn"><img src="./images/menu_btn.svg" alt="메뉴보기"></a>
+        </div>
+    </header>
+    <!-- =================================main -->
+    <main>
+        <!-- 상품 이미지 + 정보 -->
+        <div class="item_info_wrap">
+            <!-- 상품 이미지 그룹 -->
+            <div class="item_thum_wrap">
+                <!-- 작은 상품 이미지 -->
+                <ul class="item_thum_s">
+                    <li><a href="#"><img src="#" alt=""></a></li>
+                    <li><a href="#"><img src="#" alt=""></a></li>
+                    <li><a href="#"><img src="#" alt=""></a></li>
+                    <li><a href="#"><img src="#" alt=""></a></li>
+                    <li><a href="#"><img src="#" alt=""></a></li>
+                    <li><a href="#"><img src="#" alt=""></a></li>
+                </ul>
+                <!-- 메인 상품 이미지 -->
+                <div class="item_thum_L">
+                    <img src="#" alt="">
+                </div>
+            </div>
+            <!-- 상품 정보 그룹 -->
+            <div class="item_info_wrap">
+                <!-- 상품명+가격 -->
+                <div class="item_name_price">
+                    <a href="#" class="item_category"></a>
+                    <p class="item_name"></p>
+                    <h3 class="item_price"></h3>
+                    <p class="review_num"></p>
+                </div>
+                <!-- 사용자 선택  -->
+                <!-- 사용자 선택 확인 및 수량 -->
+                <!-- 총가격+버튼 -->
+                <!-- 설명 -->
+                <!-- 기타 정보 -->
+            </div>
+        </div>
+        <!-- 리뷰 -->
+    </main>
+    <!-- =================================footer -->
+<footer>
+        <div class="left_g">
+            <div class="left_top flex-row">
+                <div class="introduce flex-col">
+                    <h3>회사소개</h3>
+                    <a href="#">채용</a>
+                    <a href="#">단체 주문</a>
+                    <a href="#">지속 가능성</a>
+                    <a href="#">스웻 컬렉티브</a>
+                    <a href="#">사회공헌프로그램</a>
+                </div>
+                <div class="help_txt flex-col">
+                    <h3>도움말</h3>
+                    <a href="#">자주 묻는 질문</a>
+                    <a href="#">사이즈 가이드</a>
+                    <a href="#">주문&결제</a>
+                    <a href="#">배송 정보</a>
+                    <a href="#">반품&환불</a>
+                    <a href="#">수선안내</a>
+                </div>
+                <div class="contect flex-col">
+                    <h3>문의하기</h3>
+                    <div class="contents_g flex-row">
+                        <div class="txt">
+                            <p>게스트 에듀케이션 센터(GEC)</p>
+                            <p class="num">070.4769.7965</p>
+                            <p class="time flex-col">
+                                <span>평일 9:00AM~6:00PM</span>
+                                <span>(점심시간 12:00PM~1:00PM)</span>
+                            </p>
+                        </div>
+                        <div class="btn flex-col">
+                            <button type="button" id="kakao_btn">카카오톡 문의하기</button>
+                            <button type="button" id="store_search_btn">스토어 찾기</button>
+                        </div>
+                    </div><!-- e:contents_g -->
+                </div>
+            </div><!-- e:left_top -->
+            <div class="left_btm">
+                <p class="flex-row">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">사이트맵</a>
+                    <a href="#">회사정보</a>
+                </p>
+                <p class="information">
+                룰루레몬애틀라티카코리아 유한회사 | 대표 포레스트 엘리어트 해리스 주니어 | 서울시 강남구 봉은사로 468, 11층 (삼성동)<br>
+                | 사업자 등록번호 220-88-88573 사업자 정보 확인 | 통신판매업신고번호 2018-서울강남-01176 | 호스팅 서비스 사업자 Salefoece.com.inc.<br> 
+                | GEC 070.4769.7965  | 이메일 grc.kr@lululemon.com | © lululemon athletica Korea ltd. All rights reserved
+                </p>
+            </div>
+        </div>
+        <div class="right_g">
+            <div class="right_top">
+                <h3>More inspiration</h3>
+                <div class="sns">
+                    <a href="#"><img src="./images/kakao.svg" alt=""></a>
+                    <a href="#"><img src="./images/facebook.svg" alt=""></a>
+                    <a href="#"><img src="./images/instagram.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="right_btm">
+                <h3>뉴스레터 구독하기</h3>
+                <p>입력하신 이메일 주소로 10% 할인쿠폰을 보내드립니다.<br>뉴스레터 구독하고 신제품 소식부터 다양한 혜택까지 가장 먼저 받아보세요.</p>
+                <form action="#" method="post" id="email_frm" name="email_frm">
+                    <input type="email" name="user_email" id="user_email" placeholder="이메일">
+                    <button type="button" id="email_btn"><img src="./images/email_btn.svg" alt="이메일 전송"></button>
+                </form>
+            </div>
+        </div>
+    </footer>

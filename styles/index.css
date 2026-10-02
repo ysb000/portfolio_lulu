@@ -25,7 +25,8 @@ header .nav > li .wrap_v1 li {}
 header .nav > li .wrap_v1 li:nth-child(5) .sub_g:nth-child(1) {margin-bottom:40px;}
 header .nav > li .wrap_v1 li h3 {}
 header .nav > li .wrap_v1 li .items_categoey {margin-top:14px; gap:12px;}
-header .nav > li .wrap_v1 li .items_categoey a {width:100%; padding:2px 10px;}
+header .nav > li .wrap_v1 li .items_categoey a {width:100%; padding:2px 10px; display:block;}
+header .nav > li .wrap_v1 li .items_categoey a:hover {color:#000;}
 /* wrap_v2*/
 header .nav > li > .wrap_v2 {}
 header .nav > li > .wrap_v2 li {text-align: center;}
